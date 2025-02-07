@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/navbarActive.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Additional Contact Page Specific Styles */
+    .contact-info {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .contact-info h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .contact-info ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .social-media {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .social-media h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .social-media a img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+    .social-media a img:hover {
+      transform: scale(1.1);
+    }
+    /* Styles for the embedded Google Form */
+    .google-form {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+    .google-form h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .google-form iframe {
+      width: 100%;
+      border: none;
+      min-height: 800px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-placeholder"></div>
+  
+  <!-- Main Content -->
+  <main class="container py-5">
+    <h1 class="text-center mb-4">Contact Us</h1>
+    <div class="row">
+      <!-- Contact Information Column -->
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <ul class="list-unstyled">
+            <li><strong>Office:</strong> +91 755 269 2691 </li>
+            <li><strong>Lab:</strong> +91 755 269 2692</li>
+            <li><strong>Email:</strong> tbvl2022@gmail.com</li>
+            <li><strong>Address:</strong> Lab: 310B, 3rd Floor, Academic Building - 4, IISER Bhopal - 462066, Madhya Pradesh</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Social Media Column -->
+      <div class="col-md-6">
+        <div class="social-media">
+          <h3>Follow Us</h3>
+          <a href="https://www.linkedin.com/company/trustworthy-biometravision-lab/" target="_blank">
+            <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="assets/img/social_media_images/Instagram.webp" alt="Instagram">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <img src="assets/img/social_media_images/twitter.png" alt="Twitter">
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Embedded Google Form Section -->
+    <section class="google-form">
+      <h2>Fill Out Our Contact Form</h2>
+      <!-- Replace the src URL below with your actual Google Form embed link -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7xEfCvqXqQNjG0SYw4q6oDZy5pfzklRHMRmHmlb6xz7tAbQ/viewform?usp=header" 
+              title="Contact Form" allowfullscreen>
+        Loading…
+      </iframe>
+    </section>
+  </main>
+  
+  <!-- Include Footer -->
+  <div id="footer-placeholder"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch("partials/navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+    fetch("partials/footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>

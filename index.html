@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!-- Link to our global style.css -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/navbarActive.js"></script>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Include Navbar from Partial -->
+  <div id="navbar-placeholder"></div>
+  
+  <!-- Carousel Section -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" 
+              aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" 
+              aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" 
+              aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" 
+              aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" 
+              aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+         <img src="assets/img/lab_image/slide1.jpeg" class="d-block w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+         <img src="assets/img/lab_image/pic1.jpeg" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+         <img src="assets/img/lab_image/pic2.jpeg" class="d-block w-100" alt="Slide 3">
+      </div>
+      <div class="carousel-item">
+         <img src="assets/img/lab_image/slide2.jpeg" class="d-block w-100" alt="Slide 4">
+      </div>
+      <div class="carousel-item">
+         <img src="assets/img/lab_image/slide3.jpeg" class="d-block w-100" alt="Slide 5">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <!-- Content Section: Lab Info & News -->
+  <div class="container py-5 content-container">
+    <!-- Lab Information -->
+    <div class="main-content">
+      <h1>Welcome to</h1>
+      <h1>Trustworthy BiometraVision Lab</h1>
+      <p>
+         At IISER Bhopal, our research group is at the forefront of state-of-the-art studies in biometrics recognition, computer vision, generative learning, signal processing, and medical data analysis. We base our work on four core properties—fair, accurate, trustworthy/transparent, and explainable—to create innovative, ethical, and robust solutions for real-world challenges.
+      </p>
+      <a href="research.html" class="btn btn-primary btn-explore">Explore Our Research</a>
+    </div>
+    
+    <!-- Recent News Section -->
+    <div class="recent-news">
+      <div class="news-header">
+         <h2>Recent Updates</h2>
+      </div>
+      <div class="news-scroll-container">
+         <div class="news-scroll">
+            <ul>
+               <li><a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" target="_blank">Lab Magazine 2024</a></li>
+               <li><a href="#" target="_blank">Upcoming workshop on AI techniques</a></li>
+               <li><a href="#" target="_blank">New publication in CVPR Conference</a></li>
+               <li><a href="#" target="_blank">Welcome to our new lab members</a></li>
+            </ul>
+            <ul>
+               <li><a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" target="_blank">Lab Magazine 2024</a></li>
+               <li><a href="#" target="_blank">Upcoming workshop on AI techniques</a></li>
+               <li><a href="#" target="_blank">New publication in CVPR Conference</a></li>
+               <li><a href="#" target="_blank">Welcome to our new lab members</a></li>
+            </ul>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Include Footer from Partial -->
+  <div id="footer-placeholder"></div>
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Load navbar and footer from partial HTML files
+    fetch("partials/navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+    fetch("partials/footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+      
+    // Initialize the carousel with a 2000ms interval
+    const carouselElement = document.querySelector('#carouselExampleIndicators');
+    new bootstrap.Carousel(carouselElement, { interval: 2000 });
+  </script>
+</body>
+</html>

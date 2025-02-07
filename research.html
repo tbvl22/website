@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/navbarActive.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <h1>Research</h1>
+    <ul>
+      <li>Secure and Trustworthy Vision and Biometrics Identification (Spoofing, Adversaries, Deepfakes, Corruptions, etc.)</li>
+      <li>Biometrics Recognition (Face, Iris, Fingerprint, Voice, etc.)</li>
+      <li>Generative AI (Diffusion, GANs, etc.)</li>
+      <li>Explainable AI</li>
+      <li>Effective and Efficient AI</li>
+      <li>Novel Deep Learning Architectures and Theory</li>
+      <li>3D Computer Vision (NeRF, etc.)</li>
+    </ul>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch("partials/navbar.html").then(res => res.text()).then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+    fetch("partials/footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>
