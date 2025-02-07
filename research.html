@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/navbarActive.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Additional page-specific styling for the Research Gallery */
+    .research-gallery h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+      border-bottom: 2px solid #4ca1af;
+      padding-bottom: 10px;
+    }
+    .research-gallery .card {
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .research-gallery .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .research-gallery .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+    .research-gallery .card-title {
+      font-size: 1.25rem;
+      color: #2c3e50;
+    }
+    .research-gallery .card-text {
+      font-size: 0.95rem;
+      color: #424242;
+    }
+  </style>
 </head>
 <body>
   <!-- Include Navbar -->
@@ -24,6 +55,54 @@
       <li>Novel Deep Learning Architectures and Theory</li>
       <li>3D Computer Vision (NeRF, etc.)</li>
     </ul>
+    
+    <!-- Research Gallery Section -->
+    <section class="research-gallery mt-5">
+      <h2>Research Gallery</h2>
+      <div class="row">
+        <!-- Research Card 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="assets/img/research_images/biometrics.jpg" class="card-img-top" alt="Project 1">
+            <!-- <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">A brief description of Project 1.</p>
+            </div> -->
+          </div>
+        </div>
+        <!-- Research Card 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="assets/img/research_images/architecture_wacv.png" class="card-img-top" alt="Project 2">
+            <!-- <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">A brief description of Project 2.</p>
+            </div> -->
+          </div>
+        </div>
+        <!-- Research Card 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="assets/img/research/project3.jpg" class="card-img-top" alt="Project 3">
+            <!-- <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">A brief description of Project 3.</p>
+            </div> -->
+          </div>
+        </div>
+        <!-- Research Card 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="assets/img/research/project4.jpg" class="card-img-top" alt="Project 4">
+            <!-- <div class="card-body">
+              <h5 class="card-title">Project 4</h5>
+              <p class="card-text">A brief description of Project 4.</p>
+            </div> -->
+          </div>
+        </div>
+        <!-- Add more research cards as needed -->
+      </div>
+    </section>
   </main>
 
   <!-- Include Footer -->
@@ -31,8 +110,12 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    fetch("partials/navbar.html").then(res => res.text()).then(data => document.getElementById("navbar-placeholder").innerHTML = data);
-    fetch("partials/footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    fetch("partials/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+    fetch("partials/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
   </script>
 </body>
 </html>
