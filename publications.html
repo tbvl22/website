@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/navbarActive.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Publications Page Additional Styles */
+    .filter-bar {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .filter-bar .btn {
+      margin: 0 5px;
+      min-width: 120px;
+    }
+    /* Publication Card Header: Enhanced styling */
+    .card-header {
+      background: linear-gradient(135deg, #2244da, #5f4724) !important;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .card-header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    /* Publication Card Body Layout: Responsive splitting of abstract and figure */
+    .card-body .row {
+      margin: 0;
+    }
+    /* Default: abstract and figure stack vertically */
+    .pub-details, .pub-figure {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 20px;
+    }
+    /* For medium and larger screens: abstract takes 33% and figure 67% */
+    @media (min-width: 768px) {
+      .pub-details {
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding: 20px;
+      }
+      .pub-figure {
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding: 20px;
+      }
+    }
+    /* Justify the abstract text */
+    .pub-details p {
+      text-align: justify;
+    }
+    .pub-figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <!-- Include Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="publications">
+      <a class="navbar-brand" href="publications.html">
         <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
         Trustworthy BiometraVision Lab
       </a>
@@ -25,7 +88,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
           <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
@@ -37,137 +100,162 @@
   </nav>
 
   <!-- Main Content -->
-  <main>
-    <div class="container publications-container py-5">
-      <!-- Sidebar for Filtering -->
-      <aside class="sidebar">
-        <h3>Filter by Year</h3>
-        <button class="btn" onclick="showYear('2025')">2025</button>
-        <button class="btn" onclick="showYear('2024')">2024</button>
-      </aside>
+  <main class="container py-5">
+    <h1 class="text-center mb-4">Publications</h1>
 
-      <!-- Publications Content -->
-      <section class="content">
-        <h1>Publications</h1>
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="btn btn-primary" onclick="showYear('2025')">2025</button>
+      <button class="btn btn-secondary" onclick="showYear('2024')">2024</button>
+    </div>
 
-        <!-- Publications for 2025 -->
-        <div id="2025" class="publication-year">
-          <div class="publication-item">
-            <div class="publication-details">
-              <h3 class="publication-title">
-                <a href="https://example.com/2025_paper1" target="_blank">
+    <!-- Publications for 2025 -->
+    <div id="2025" class="publication-year">
+      <div class="row g-4">
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://example.com/2025_paper1" target="_blank" style="text-decoration: none; color: inherit;">
                   On Which Data Distribution (Synthetic or Real) We Should Rely for Soft Biometric Classification
                 </a>
               </h3>
               <p><strong>Authors:</strong> Manju RA, Atul Kumar, Akshay Agarwal</p>
-              <p><strong>Abstract:</strong> Gender identification is vital for human-computer interaction and identity search. While "real" facial images are standard in gender classification, synthetic images are gaining attention due to privacy concerns and advancements in generative networks. However, their effectiveness remains unclear. This study evaluates the performance of gender classification networks trained on real vs. synthetic face images. Using 8 Deep Neural Networks (DNNs), including CNNs and ViTs, across 4 datasets and 6 image corruptions, we also employ Grad-CAM and t-SNE for interpretability. The research assesses synthetic data's reliability in reflecting real-world distributions and resilience to perturbations.
-              </p>
             </div>
-            <div class="publication-figure">
-              <img src="assets/img/publications/2025/p1.png" alt="Paper Figure">
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Gender identification is vital for human-computer interaction and identity search. While "real" facial images are standard in gender classification, synthetic images are gaining attention due to privacy concerns and advancements in generative networks. However, their effectiveness remains unclear. This study evaluates the performance of gender classification networks trained on real vs. synthetic face images. Using 8 DNNs, including CNNs and ViTs, across 4 datasets and 6 image corruptions, we also employ Grad-CAM and t-SNE for interpretability.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/p1.png" alt="Paper Figure">
+              </div>
             </div>
           </div>
-          <hr>
-          <div class="publication-item">
-            <div class="publication-details">
-              <h3 class="publication-title">
-                <a href="https://example.com/2025_paper2" target="_blank">
+        </div>
+        <!-- Publication Card 2 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://example.com/2025_paper2" target="_blank" style="text-decoration: none; color: inherit;">
                   PrecipFormer: Efficient Transformer for Precipitation Downscaling
                 </a>
               </h3>
               <p><strong>Authors:</strong> R. Kumar, T. Sharma, V. Vaghela, S. Jha, A. Agarwal</p>
-              <p><strong>Abstract:</strong> A study on the applications of generative models in secure environments.
-              </p>
             </div>
-            <div class="publication-figure">
-              <img src="assets/img/publications/2025_paper2.jpg" alt="Paper Figure">
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> A study on the applications of generative models in secure environments.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/paper2.jpg" alt="Paper Figure">
+              </div>
             </div>
           </div>
-          <hr>
         </div>
+      </div>
+      <hr>
+    </div>
 
-        <!-- Publications for 2024 -->
-        <div id="2024" class="publication-year hidden">
-          <div class="publication-item">
-            <div class="publication-details">
-              <h3 class="publication-title">
-                <a href="https://example.com/2024_paper1" target="_blank">
+    <!-- Publications for 2024 -->
+    <div id="2024" class="publication-year hidden">
+      <div class="row g-4">
+        <!-- Publication Card 1 (2024) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://example.com/2024_paper1" target="_blank" style="text-decoration: none; color: inherit;">
                   Corruption Depth: Analysis of DNN Depth
                 </a>
               </h3>
               <p><strong>Authors:</strong> Akshay Agarwal, Nalini Ratha</p>
-              <p><strong>Abstract:</strong> We introduce the concept of corruption depth to identify the network layers where misclassification due to input corruptions occurs. This novel approach provides insights into how corruptions affect specific layers, enabling targeted pruning instead of computationally expensive full-network purification. Our study explores the relationship between input complexity, noise, and network depth, presenting a framework to analyze classification progress through the network. This understanding enhances model explainability and compression, offering a new perspective on query difficulty and example memorization.
-              </p>
             </div>
-            <div class="publication-figure">
-              <img src="assets/img/publications/2024/p1.jpg" alt="Paper Figure">
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> We introduce the concept of corruption depth to identify network layers where misclassification due to input corruptions occurs. This approach provides insights into corruption effects and enables targeted pruning over full-network purification.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2024/p1.jpg" alt="Paper Figure">
+              </div>
             </div>
           </div>
-          <hr>
-          <div class="publication-item">
-            <div class="publication-details">
-              <h3 class="publication-title">
-                <a href="https://example.com/2024_paper2" target="_blank">
+        </div>
+        <!-- Publication Card 2 (2024) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://example.com/2024_paper2" target="_blank" style="text-decoration: none; color: inherit;">
                   Indian Traffic Sign Detection and Classification Through a Unified Framework
                 </a>
               </h3>
               <p><strong>Authors:</strong> Rishabh Uikey, Haroon R. Lone, Akshay Agarwal</p>
-              <p><strong>Abstract:</strong> Traffic signboards play a crucial role in smart transportation systems, with inattentiveness to these boards causing over 90% of accidents. Addressing the unique challenges of Indian traffic signboards, we propose a novel deep neural network architecture for simultaneous detection and classification. Our method leverages state-of-the-art backbones like AlexNet, VGG-19, ResNet-50, and EfficientNet v2 to achieve detection and classification accuracies of 85.5% and 98.5% on a newly collected Indian traffic sign dataset with 4257 images. Comprehensive evaluations on both the collected and existing datasets highlight the effectiveness of our approach compared to state-of-the-art methods.
-              </p>
             </div>
-            <div class="publication-figure">
-              <img src="assets/img/publications/2024/p2.jpg" alt="Paper Figure">
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Traffic signboards are crucial for smart transportation. We propose a novel DNN architecture for simultaneous detection and classification, leveraging state-of-the-art backbones for high accuracies.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2024/p2.jpg" alt="Paper Figure">
+              </div>
             </div>
           </div>
-          <hr>
-          <div class="publication-item">
-            <div class="publication-details">
-              <h3 class="publication-title">
-                <a href="https://example.com/2024_paper3" target="_blank">
+        </div>
+        <!-- Publication Card 3 (2024) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header text-center">
+              <h3>
+                <a href="https://example.com/2024_paper3" target="_blank" style="text-decoration: none; color: inherit;">
                   A Generalized Semiconductor Wafer Defect Classifier
                 </a>
               </h3>
               <p><strong>Authors:</strong> P. Rai, P. Pal, A. Agarwal</p>
-              <p><strong>Abstract:</strong> Silicon-based integrated circuits (ICs) and electronic devices are used in every possible electronic device, including high-performance computers fabricated from silicon wafers. Hence, ensuring the quality and reliability of silicon components is of utmost importance. This work focuses on developing and implementing computer vision and deep learning algorithms to detect defects in semiconductor manufacturing ICs, contributing to higher yields and reduced production costs.
-              </p>
             </div>
-            <div class="publication-figure">
-              <img src="assets/img/publications/2024/p3.png" alt="Paper Figure">
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This work develops computer vision and deep learning algorithms to detect defects in semiconductor manufacturing, improving yields and reducing production costs.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2024/p3.png" alt="Paper Figure">
+              </div>
             </div>
           </div>
-          <hr>
         </div>
-      </section>
+      </div>
+      <hr>
     </div>
   </main>
 
   <!-- Include Footer -->
   <div id="footer-placeholder"></div>
 
-  <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Load navbar and footer from partial files
-    fetch("partials/navbar.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
-    fetch("partials/footer.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-
-    // JavaScript to toggle between publication years
+    // JavaScript to toggle between publication years using filter buttons
     function showYear(year) {
       const years = document.querySelectorAll('.publication-year');
       years.forEach(y => y.classList.add('hidden'));
       document.getElementById(year).classList.remove('hidden');
 
-      // Update button styles in the sidebar
-      document.querySelectorAll('.sidebar .btn').forEach(button => {
-        button.classList.remove('active', 'btn-primary');
-        button.classList.add('btn-secondary');
+      // Update button styles for visual feedback
+      const buttons = document.querySelectorAll('.filter-bar .btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-secondary');
       });
-      const activeButton = document.querySelector(`[onclick="showYear('${year}')"]`);
-      activeButton.classList.add('active', 'btn-primary');
+      const activeButton = Array.from(buttons).find(btn => btn.textContent.trim() === year);
+      if (activeButton) {
+        activeButton.classList.remove('btn-secondary');
+        activeButton.classList.add('btn-primary');
+      }
     }
 
     // Show default year (2024) on page load
