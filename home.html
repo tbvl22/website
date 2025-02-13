@@ -4,13 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/navbarActive.js"></script>
+  <!-- Load Bootstrap first -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Then your custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Optionally, include your navbarActive.js if needed for active nav highlighting -->
+  <script src="assets/js/navbarActive.js"></script>
+  <style>
+    nav.navbar {
+      position: sticky !important;
+      top: 0;
+      z-index: 1050 !important;
+    }
+  </style>
 </head>
 <body>
-  <!-- Include Navbar from Partial -->
-  <div id="navbar-placeholder"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">
+        <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
+        Trustworthy BiometraVision Lab
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   
   <!-- Carousel Section -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -75,28 +108,18 @@
             <ul>
                <li><a href="#" target="_blank">Atul & Aarthi got SIG grant from IICE, IISER Bhopal</a></li>
                <li><a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" target="_blank">Lab Magazine 2024</a></li>
-               <!-- <li><a href="#" target="_blank">Upcoming workshop on AI techniques</a></li>
-               <li><a href="#" target="_blank">New publication in CVPR Conference</a></li> -->
             </ul>
          </div>
       </div>
     </div>
   </div>
   
-  <!-- Include Footer from Partial -->
-  <div id="footer-placeholder"></div>
+  <footer class="bg-dark text-white text-center py-3 sticky-bottom">
+    <p>&copy; 2025 Trustworthy BiometraVision Lab. All Rights Reserved.</p>
+  </footer>
   
-  <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Load navbar and footer from partial files
-    fetch("partials/navbar.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
-    fetch("partials/footer.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-      
     // Initialize the carousel with a 2000ms interval
     const carouselElement = document.querySelector('#carouselExampleIndicators');
     new bootstrap.Carousel(carouselElement, { interval: 2000 });
