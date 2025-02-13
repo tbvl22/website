@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alumni</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/navbarActive.js"></script>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Page-specific styles for Alumni (most styling is in style.css) */
+    /* Page-specific styles for Alumni */
     .alumni-container {
-      max-width: 900px;
+      max-width: 1400px; /* Increased max-width for larger screens */
       margin: auto;
+      padding: 0 15px;
     }
-    /* Optional: Add some padding on smaller screens */
-    @media (max-width: 768px) {
-      .alumni-container {
-        padding: 0 15px;
-      }
+    /* Ensure cards are uniform in height */
+    .alumni-card {
+      height: 100%;
+    }
+    .alumni-card img.card-img-top {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <!-- Include Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position: sticky; top:0; z-index:1050;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="alumni">
+      <a class="navbar-brand" href="alumni.html">
         <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
         Trustworthy BiometraVision Lab
       </a>
@@ -41,7 +43,7 @@
           <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link active" href="alumni.html">Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
           <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -53,16 +55,15 @@
   <!-- Main Content -->
   <main class="alumni-container py-5">
     <h1 class="text-center mb-4">Our Alumni</h1>
-    <div class="row">
+    <div class="row g-4">
       <!-- Alumni Card 1 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Shukla Shivam Ashokbhai">
           <div class="card-body">
             <h5 class="card-title">Shukla Shivam Ashokbhai</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> TCS</p> -->
-            <!-- Only the LinkedIn logo; clicking it goes to his LinkedIn profile -->
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> shukla@example.com</p>
             <a href="https://www.linkedin.com/in/shivam-shukla-0a50ab1a2/" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
@@ -70,13 +71,13 @@
         </div>
       </div>
       <!-- Alumni Card 2 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Harshul Raj Surana">
           <div class="card-body">
             <h5 class="card-title">Harshul Raj Surana</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> CEO, Startup XYZ</p> -->
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> harshul@example.com</p>
             <a href="https://www.linkedin.com/in/hruturaj-dhake-340225193/" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
@@ -84,13 +85,13 @@
         </div>
       </div>
       <!-- Alumni Card 3 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Dhake Hruturaj Mahendra">
           <div class="card-body">
             <h5 class="card-title">Dhake Hruturaj Mahendra</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> Data Analyst, Tech Corp</p> -->
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> dhake@example.com</p>
             <a href="https://linkedin.com/in/robertlee" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
@@ -98,162 +99,103 @@
         </div>
       </div>
       <!-- Alumni Card 4 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Saragadam Abhiram Laxmi Raj">
           <div class="card-body">
             <h5 class="card-title">Saragadam Abhiram Laxmi Raj</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> Engineer, Tech Solutions</p> -->
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> saragadam@example.com</p>
             <a href="https://linkedin.com/in/emilyclark" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
           </div>
         </div>
       </div>
-            <!-- Alumni Card 1 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <!-- Alumni Card 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top" alt="Jayasri Dharmireddi">
           <div class="card-body">
-            <h5 class="card-title">Shukla Shivam Ashokbhai</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> TCS</p> -->
-            <!-- Only the LinkedIn logo; clicking it goes to his LinkedIn profile -->
+            <h5 class="card-title">Jayasri Dharmireddi</h5>
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> jayasri@example.com</p>
             <a href="https://linkedin.com/in/johndoe" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
           </div>
         </div>
       </div>
-      <!-- Alumni Card 2 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <!-- Alumni Card 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Udaybhan Rathore">
           <div class="card-body">
-            <h5 class="card-title">Harshul Raj Surana</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> CEO, Startup XYZ</p> -->
+            <h5 class="card-title">Udaybhan Rathore</h5>
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> udaybhan@example.com</p>
             <a href="https://linkedin.com/in/janesmith" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
           </div>
         </div>
       </div>
-      <!-- Alumni Card 3 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <!-- Alumni Card 7 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Aditya Sneh">
           <div class="card-body">
-            <h5 class="card-title">Dhake Hruturaj Mahendra</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> Data Analyst, Tech Corp</p> -->
+            <h5 class="card-title">Aditya Sneh</h5>
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> aditya@example.com</p>
             <a href="https://linkedin.com/in/robertlee" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
           </div>
         </div>
       </div>
-      <!-- Alumni Card 4 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="alumni-card card mb-4">
-          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
+      <!-- Alumni Card 8 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Manav Kundal">
           <div class="card-body">
-            <h5 class="card-title">Saragadam Abhiram Laxmi Raj</h5>
-            <p class="card-text"><strong>Degree:</strong> MS</p>
-            <!-- <p class="card-text"><strong>Position:</strong> Engineer, Tech Solutions</p> -->
+            <h5 class="card-title">Manav Kundal</h5>
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> manav@example.com</p>
             <a href="https://linkedin.com/in/emilyclark" target="_blank">
               <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
             </a>
           </div>
         </div>
       </div>
-          <!-- Alumni Card 5 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="alumni-card card mb-4">
-              <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top" alt="Alumni Photo">
-              <div class="card-body">
-                <h5 class="card-title">Jayasri Dharmireddi</h5>
-                <p class="card-text"><strong>Degree:</strong> MS</p>
-                <!-- <p class="card-text"><strong>Position:</strong> TCS</p> -->
-                <!-- Only the LinkedIn logo; clicking it goes to his LinkedIn profile -->
-                <a href="https://linkedin.com/in/johndoe" target="_blank">
-                  <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
-                </a>
-              </div>
-            </div>
+      <!-- Alumni Card 9 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top" alt="Archana Yadav">
+          <div class="card-body">
+            <h5 class="card-title">Archana Yadav</h5>
+            <p class="card-text"><strong>Degree:</strong> BS-MS</p>
+            <p class="card-text"><strong>Email:</strong> archana@example.com</p>
+            <a href="https://linkedin.com/in/robertlee" target="_blank">
+              <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
+            </a>
           </div>
-          <!-- Alumni Card 6 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="alumni-card card mb-4">
-              <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
-              <div class="card-body">
-                <h5 class="card-title">Udaybhan Rathore</h5>
-                <p class="card-text"><strong>Degree:</strong> MS</p>
-                <!-- <p class="card-text"><strong>Position:</strong> CEO, Startup XYZ</p> -->
-                <a href="https://linkedin.com/in/janesmith" target="_blank">
-                  <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
-                </a>
-              </div>
-            </div>
+        </div>
+      </div>
+      <!-- Alumni Card 10 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="alumni-card card h-100">
+          <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Ojaswee">
+          <div class="card-body">
+            <h5 class="card-title">Ojaswee</h5>
+            <p class="card-text"><strong>Degree:</strong> MS</p>
+            <p class="card-text"><strong>Email:</strong> ojaswee@example.com</p>
+            <a href="https://linkedin.com/in/emilyclark" target="_blank">
+              <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
+            </a>
           </div>
-          <!-- Alumni Card 7 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="alumni-card card mb-4">
-              <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
-              <div class="card-body">
-                <h5 class="card-title">Aditya Sneh</h5>
-                <p class="card-text"><strong>Degree:</strong> MS</p>
-                <!-- <p class="card-text"><strong>Position:</strong> Data Analyst, Tech Corp</p> -->
-                <a href="https://linkedin.com/in/robertlee" target="_blank">
-                  <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Alumni Card 8 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="alumni-card card mb-4">
-              <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
-              <div class="card-body">
-                <h5 class="card-title">Manav Kundal</h5>
-                <p class="card-text"><strong>Degree:</strong> MS</p>
-                <!-- <p class="card-text"><strong>Position:</strong> Engineer, Tech Solutions</p> -->
-                <a href="https://linkedin.com/in/emilyclark" target="_blank">
-                  <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
-                </a>
-              </div>
-            </div>
-          </div>
-                  <!-- Alumni Card 9 -->
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="alumni-card card mb-4">
-                      <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top" alt="Alumni Photo">
-                      <div class="card-body">
-                        <h5 class="card-title">Archana Yadav</h5>
-                        <p class="card-text"><strong>Degree:</strong> MS</p>
-                        <!-- <p class="card-text"><strong>Position:</strong> Data Analyst, Tech Corp</p> -->
-                        <a href="https://linkedin.com/in/robertlee" target="_blank">
-                          <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Alumni Card 10 -->
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="alumni-card card mb-4">
-                      <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Alumni Photo">
-                      <div class="card-body">
-                        <h5 class="card-title">Ojaswee</h5>
-                        <p class="card-text"><strong>Degree:</strong> MS</p>
-                        <!-- <p class="card-text"><strong>Position:</strong> Engineer, Tech Solutions</p> -->
-                        <a href="https://linkedin.com/in/emilyclark" target="_blank">
-                          <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" style="width:30px; height:30px;">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-      <!-- Add additional alumni cards as needed -->
+        </div>
+      </div>
     </div>
   </main>
 
