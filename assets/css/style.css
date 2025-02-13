@@ -141,12 +141,24 @@ hr {
     padding: 10px 30px;
 }
 
-/* Visitor Counter */
+/* Visitor Counter Styling in Footer */
 .visitor-counter {
+    background: rgba(255, 255, 255, 0.2); /* light overlay for contrast */
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
     font-size: 1.2rem;
-    color: #2c3e50;
-    margin-top: 20px;
 }
+.visitor-counter i {
+    color: #ffcc00; /* bright yellow eye icon */
+    margin-right: 5px;
+}
+.visitor-counter span {
+    color: #ffffff; /* white text for the counter number */
+    font-weight: bold;
+}
+
 
 /* Recent News Section */
 .recent-news {
