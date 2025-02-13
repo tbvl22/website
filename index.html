@@ -4,24 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  <!-- Load Bootstrap first -->
+  <!-- Load Bootstrap CSS first -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Load Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Then your custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Optionally, include your navbarActive.js if needed for active nav highlighting -->
+  <!-- Optionally, include your navbarActive.js if needed -->
   <script src="assets/js/navbarActive.js"></script>
-  <style>
-    nav.navbar {
-      position: sticky !important;
-      top: 0;
-      z-index: 1050 !important;
-    }
-  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
+  <!-- Hardcoded Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position: sticky; top: 0; z-index: 1050;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="homepage">
+      <a class="navbar-brand" href="home.html">
         <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
         Trustworthy BiometraVision Lab
       </a>
@@ -114,15 +110,19 @@
     </div>
   </div>
   
-  <footer class="bg-dark text-white text-center py-3 sticky-bottom">
-    <p>&copy; 2025 Trustworthy BiometraVision Lab. All Rights Reserved.</p>
+  <!-- Footer with Visitor Counter on the Right -->
+  <footer class="bg-dark text-white py-3 sticky-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+      <p class="mb-0">&copy; 2025 Trustworthy BiometraVision Lab. All Rights Reserved.</p>
+      <div class="visitor-counter">
+        <i class="bi bi-eye-fill" style="font-size: 1.5rem; color: #ffcc00;"></i>
+        <span id="impression-counter" style="font-size: 1.2rem; font-weight: bold; color: #ffffff;" class="ms-1">Loading...</span>
+      </div>
+    </div>
   </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Initialize the carousel with a 2000ms interval
-    const carouselElement = document.querySelector('#carouselExampleIndicators');
-    new bootstrap.Carousel(carouselElement, { interval: 2000 });
-  </script>
+  <!-- Include the visitor counter script after the counter element is in the DOM -->
+  <script src="assets/js/counter.js"></script>
 </body>
 </html>
