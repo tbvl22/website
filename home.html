@@ -28,6 +28,10 @@
       50%  { opacity: 0.2; }
       100% { opacity: 1; }
     }
+    .flash-bg {
+  background-color: #f8f9fa; /* Change to your preferred background color or add a background image */
+}
+
   </style>
   <!-- Optionally, include your navbarActive.js if needed -->
   <script src="assets/js/navbarActive.js"></script>
@@ -61,9 +65,27 @@
   </nav>
   
   <!-- Flash Message (persistent and flashing) -->
-  <div id="flash-message" class="alert alert-warning flash m-3" role="alert">
+  <!-- <div id="flash-message" class="alert alert-warning flash m-3" role="alert">
     Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!
+  </div> -->
+
+  <div class="container-fluid flash-bg py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="flash-message" class="alert alert-warning flash" role="alert">
+            Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="flash-internship" class="alert alert-info flash" role="alert">
+            Interested in a Summer Internship? <a href="https://www.iiserb.ac.in/doaa/internship" class="alert-link" target="_blank">Apply now!</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
   
   <!-- Carousel Section -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -124,10 +146,11 @@
           <div class="news-scroll-container">
             <div class="news-scroll">
               <ul>
-                <li><a href="http://" target="_blank" >Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member, Vishesh Kumar, has had his paper accepted at CVPR, a prestigious top-tier A* conference in computer vision</a></li>
+                <!-- <li><a href="http://" target="_blank" >Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!</a></li> -->
                 <li><a href="#" target="_blank">Dr. Akshay Agarwal is serving as a senior program committee member of IJCAI 2025</a></li>
                 <li>Workshop on Unmasking Deepfakes at IEEE Conference on AI 2025 <a href="https://sites.google.com/iiserb.ac.in/cai-udf/home" target="_blank">Link1</a><a href="https://idiap.ch/~kkotwal/cai.html" target="_blank">Link2</a></li>
-                <li><a href="#" target="_blank">Atul & Aarthi got SIG grant from IICE, IISER Bhopal</a></li>
+                <!-- <li><a href="#" target="_blank">Atul & Aarthi got SIG grant from IICE, IISER Bhopal</a></li> -->
                 <!-- <li><a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" target="_blank">Lab Magazine 2024</a></li> -->
               </ul>
             </div>
