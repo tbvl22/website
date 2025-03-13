@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Then your custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Inline CSS for Flash Message Animation and Styling -->
+  <!-- Inline CSS for Flash Message Animations and Styling -->
   <style>
     .flash {
       animation: flash-animation 1s infinite;
@@ -29,9 +29,25 @@
       100% { opacity: 1; }
     }
     .flash-bg {
-  background-color: #f8f9fa; /* Change to your preferred background color or add a background image */
-}
-
+      background-color: #f8f9fa;
+    }
+    /* New Celebration Flash Message Style */
+    .celebration-flash {
+      animation: scale-animation 1s infinite;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border: 2px solid #17a2b8;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(23, 162, 184, 0.5);
+      background-color: #d1ecf1;
+      padding: 10px;
+    }
+    @keyframes scale-animation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
   </style>
   <!-- Optionally, include your navbarActive.js if needed -->
   <script src="assets/js/navbarActive.js"></script>
@@ -64,14 +80,19 @@
     </div>
   </nav>
   
-  <!-- Flash Message (persistent and flashing) -->
-  <!-- <div id="flash-message" class="alert alert-warning flash m-3" role="alert">
-    Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!
-  </div> -->
-
+  <!-- Celebratory Flash Message with a different celebration style -->
   <div class="container-fluid flash-bg py-3">
     <div class="container">
+      <!-- New Celebratory Row -->
       <div class="row">
+        <div class="col-12">
+          <div id="flash-celebration" class="alert alert-info celebration-flash text-center" role="alert">
+            <i class="bi bi-fire"></i> <i class="bi bi-trophy-fill"></i> Dr. Akshay Agarwal is promoted to the senior member grade of IEEE <i class="bi bi-trophy-fill"></i> <i class="bi bi-fire"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Existing Flash Messages -->
+      <div class="row mt-3">
         <div class="col-md-6">
           <div id="flash-message" class="alert alert-warning flash" role="alert">
             Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!
@@ -85,7 +106,6 @@
       </div>
     </div>
   </div>
-
   
   <!-- Carousel Section -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -126,7 +146,7 @@
   <!-- Content Section: Lab Info & News -->
   <div class="container py-5 content-container">
     <div class="row">
-      <!-- Lab Information Section (takes 66.66% width on larger screens) -->
+      <!-- Lab Information Section -->
       <div class="col-12 col-lg-8">
         <div class="main-content">
           <h1>Welcome to</h1>
@@ -137,7 +157,7 @@
           <a href="research.html" class="btn btn-primary btn-explore">Explore Our Research</a>
         </div>
       </div>
-      <!-- News Section (takes 33.33% width on larger screens) -->
+      <!-- News Section -->
       <div class="col-12 col-lg-4">
         <div class="recent-news">
           <div class="news-header">
@@ -148,11 +168,8 @@
               <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">Dr. Akshay Agarwal is promoted to the senior member grade of IEEE</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member, Vishesh Kumar, has had his paper accepted at CVPR, a prestigious top-tier A* conference in computer vision</a></li>
-                <!-- <li><a href="http://" target="_blank" >Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!</a></li> -->
                 <li><a href="#" target="_blank">Dr. Akshay Agarwal is serving as a senior program committee member of IJCAI 2025</a></li>
                 <li>Workshop on Unmasking Deepfakes at IEEE Conference on AI 2025 <a href="https://sites.google.com/iiserb.ac.in/cai-udf/home" target="_blank">Link1</a><a href="https://idiap.ch/~kkotwal/cai.html" target="_blank">Link2</a></li>
-                <!-- <li><a href="#" target="_blank">Atul & Aarthi got SIG grant from IICE, IISER Bhopal</a></li> -->
-                <!-- <li><a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" target="_blank">Lab Magazine 2024</a></li> -->
               </ul>
             </div>
           </div>
@@ -173,7 +190,6 @@
   </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Include the visitor counter script after the counter element is in the DOM -->
   <script src="assets/js/counter.js"></script>
 </body>
 </html>
