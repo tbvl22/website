@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/navbarActive.js"></script>
@@ -30,24 +30,21 @@
       margin: 0;
       font-size: 2rem;
       font-weight: bold;
-      text-transform: uppercase;
     }
     .card-header p {
       margin: 5px 0 0;
       font-size: 1.2rem;
       opacity: 0.9;
     }
-    /* Publication Card Body Layout: Responsive splitting of abstract and figure */
+    /* Publication Card Body Layout */
     .card-body .row {
       margin: 0;
     }
-    /* Default: abstract and figure stack vertically */
     .pub-details, .pub-figure {
       flex: 0 0 100%;
       max-width: 100%;
       padding: 20px;
     }
-    /* For medium and larger screens: abstract takes 33% and figure 67% */
     @media (min-width: 768px) {
       .pub-details {
         flex: 0 0 40%;
@@ -60,7 +57,6 @@
         padding: 20px;
       }
     }
-    /* Justify the abstract text */
     .pub-details p {
       text-align: justify;
     }
@@ -68,6 +64,19 @@
       max-width: 100%;
       height: auto;
       border-radius: 5px;
+    }
+    /* Styles for continuous citation lists */
+    .publication-list p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .publication-year h2 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      color: #2c3e50;
+      border-bottom: 2px solid #4ca1af;
+      padding-bottom: 5px;
     }
   </style>
 </head>
@@ -109,7 +118,7 @@
       <button class="btn btn-secondary" onclick="showYear('2024')">2024</button>
     </div>
 
-    <!-- Publications for 2025 -->
+    <!-- Publications for 2025 (Original Card Layout) -->
     <div id="2025" class="publication-year">
       <div class="row g-4">
         <!-- Publication Card 1 (2025) -->
@@ -117,19 +126,19 @@
           <div class="publication-item card h-100">
             <div class="card-header">
               <h3>
-                <a href="https://example.com/2025_paper1" target="_blank" style="text-decoration: none; color: inherit;">
-                  On Which Data Distribution (Synthetic or Real) We Should Rely for Soft Biometric Classification
+                <a href="https://www.sciencedirect.com/science/article/pii/S2214212624002138?dgcid=author" target="_blank" style="text-decoration: none; color: inherit;">
+                  Detection of identity swapping attacks in low-resolution image settings
                 </a>
               </h3>
-              <p> Manju RA, Atul Kumar, Akshay Agarwal</p>
+              <p>Akshay Agarwal, Nalini Ratha</p>
             </div>
             <div class="card-body d-flex flex-wrap">
               <div class="pub-details">
-                <p><strong>Abstract:</strong> Gender identification is vital for human-computer interaction and identity search. While "real" facial images are standard in gender classification, synthetic images are gaining attention due to privacy concerns and advancements in generative networks. However, their effectiveness remains unclear. This study evaluates the performance of gender classification networks trained on real vs. synthetic face images. Using 8 DNNs, including CNNs and ViTs, across 4 datasets and 6 image corruptions, we also employ Grad-CAM and t-SNE for interpretability.
+                <p><strong>Abstract:</strong> This research proposes a low-resolution identity swap attack detection algorithm to address the challenge of detecting fake face images in low-resolution videos. The algorithm uses artifacts amplification and classification to handle the lack of information content. Extensive evaluations using multiple databases, resolution settings, and attack types demonstrate the strength and effectiveness of the proposed algorithm in in-the-wild settings. The results show superiority compared to existing state-of-the-art works.
                 </p>
               </div>
               <div class="pub-figure d-flex align-items-center justify-content-center">
-                <img src="assets/img/publications/2025/p1.png" alt="Paper Figure">
+                <img src="assets/img/publications/2025/p1.jpg" alt="Paper Figure">
               </div>
             </div>
           </div>
@@ -139,11 +148,33 @@
           <div class="publication-item card h-100">
             <div class="card-header">
               <h3>
+                <a href="https://openaccess.thecvf.com/content/WACV2025/papers/A_On_Which_Data_Distribution_Synthetic_or_Real_We_Should_Rely_WACV_2025_paper.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                  On Which Data Distribution (Synthetic or Real) We Should Rely for Soft Biometric Classification
+                </a>
+              </h3>
+              <p>Manju RA, Atul Kumar, Akshay Agarwal</p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Gender identification is vital for human-computer interaction and identity search. While "real" facial images are standard in gender classification, synthetic images are gaining attention due to privacy concerns and advancements in generative networks. However, their effectiveness remains unclear. This study evaluates the performance of gender classification networks trained on real vs. synthetic face images. Using 8 DNNs, including CNNs and ViTs, across 4 datasets and 6 image corruptions, we also employ Grad-CAM and t-SNE for interpretability.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/p2.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 3 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
                 <a href="https://example.com/2025_paper2" target="_blank" style="text-decoration: none; color: inherit;">
                   PrecipFormer: Efficient Transformer for Precipitation Downscaling
                 </a>
               </h3>
-              <p> R. Kumar, T. Sharma, V. Vaghela, S. Jha, A. Agarwal</p>
+              <p>R. Kumar, T. Sharma, V. Vaghela, S. Jha, A. Agarwal</p>
             </div>
             <div class="card-body d-flex flex-wrap">
               <div class="pub-details">
@@ -160,77 +191,46 @@
       <hr>
     </div>
 
-    <!-- Publications for 2024 -->
+    <!-- Publications for 2024 (Divided into Sections) -->
     <div id="2024" class="publication-year hidden">
-      <div class="row g-4">
-        <!-- Publication Card 1 (2024) -->
-        <div class="col-12">
-          <div class="publication-item card h-100">
-            <div class="card-header">
-              <h3>
-                <a href="https://example.com/2024_paper1" target="_blank" style="text-decoration: none; color: inherit;">
-                  Corruption Depth: Analysis of DNN Depth
-                </a>
-              </h3>
-              <p> Akshay Agarwal, Nalini Ratha</p>
-            </div>
-            <div class="card-body d-flex flex-wrap">
-              <div class="pub-details">
-                <p><strong>Abstract:</strong> We introduce the concept of corruption depth to identify network layers where misclassification due to input corruptions occurs. This approach provides insights into corruption effects and enables targeted pruning over full-network purification.
-                </p>
-              </div>
-              <div class="pub-figure d-flex align-items-center justify-content-center">
-                <img src="assets/img/publications/2024/p1.jpg" alt="Paper Figure">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Publication Card 2 (2024) -->
-        <div class="col-12">
-          <div class="publication-item card h-100">
-            <div class="card-header">
-              <h3>
-                <a href="https://example.com/2024_paper2" target="_blank" style="text-decoration: none; color: inherit;">
-                  Indian Traffic Sign Detection and Classification Through a Unified Framework
-                </a>
-              </h3>
-              <p> Rishabh Uikey, Haroon R. Lone, Akshay Agarwal</p>
-            </div>
-            <div class="card-body d-flex flex-wrap">
-              <div class="pub-details">
-                <p><strong>Abstract:</strong> Traffic signboards are crucial for smart transportation. We propose a novel DNN architecture for simultaneous detection and classification, leveraging state-of-the-art backbones for high accuracies.
-                </p>
-              </div>
-              <div class="pub-figure d-flex align-items-center justify-content-center">
-                <img src="assets/img/publications/2024/p2.jpg" alt="Paper Figure">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Publication Card 3 (2024) -->
-        <div class="col-12">
-          <div class="publication-item card h-100">
-            <div class="card-header text-center">
-              <h3>
-                <a href="https://example.com/2024_paper3" target="_blank" style="text-decoration: none; color: inherit;">
-                  A Generalized Semiconductor Wafer Defect Classifier
-                </a>
-              </h3>
-              <p> P. Rai, P. Pal, A. Agarwal</p>
-            </div>
-            <div class="card-body d-flex flex-wrap">
-              <div class="pub-details">
-                <p><strong>Abstract:</strong> This work develops computer vision and deep learning algorithms to detect defects in semiconductor manufacturing, improving yields and reducing production costs.
-                </p>
-              </div>
-              <div class="pub-figure d-flex align-items-center justify-content-center">
-                <img src="assets/img/publications/2024/p3.png" alt="Paper Figure">
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Journals Section -->
+      <h2>Journals</h2>
+      <div class="publication-list">
+        <p>R. Uikey, H. R. Lone, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10562197" target="_blank" rel="noopener noreferrer">Indian Traffic Sign Detection and Classification Through a Unified Framework</a>, In IEEE Transactions on Intelligent Transportation Systems, 2024, vol. 25, no. 10, pp. 14866-14875, (DOI: 10.1109/TITS.2024.3411117) (Impact Factor: 7.9) (h5-index: 143)</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://www.sciencedirect.com/science/article/pii/S0893608023006585" target="_blank" rel="noopener noreferrer">Corruption Depth: Analysis of DNN depth for Misclassification</a>, In Neural Networks, 2024, vol. 172, pp. 106013. (Impact Factor: 6.0) (h5-index: 95) (SSRN Link)</p>
+        <p></p>
       </div>
-      <hr>
+      <!-- Conferences Section -->
+      <h2>Conferences</h2>
+      <div class="publication-list">
+        <p>V. Kumar, A. Agarwal, A Unified, <a href="" target="_blank" rel="noopener noreferrer">Resilient, and Explainable Adversarial Patch Detector</a>, IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025 (h5-index: 440)</p>
+        <p>P. Rai, P. Pal, A. Agarwal, <a href="https://openreview.net/pdf?id=VAJVN44B5b" target="_blank" rel="noopener noreferrer">A Generalized Semiconductor Wafer Defect Classifier</a>, ICLR TinyPapers, 2024. (h5-index: 304) (Invite to Present)</p>
+        <p>K. Bhesra, S. Shukla, A. Agarwal, <a href="https://openreview.net/pdf?id=dD2e3aCEcO" target="_blank" rel="noopener noreferrer">Audio vs. Text: Identify a Powerful Modality for Effective Hate Speech Detection</a>, ICLR TinyPapers, 2024. (h5-index: 304) (Invite to Present)</p>
+        <p>A. Likhit, D. Tripathi, A. Agarwal, <a href="https://openreview.net/pdf?id=HzEefCle2c" target="_blank" rel="noopener noreferrer">A Novel Sector-Based Algorithm for an Optimized Star-Galaxy Classification</a>, ICLR TinyPapers, 2024. (h5-index: 304)</p>
+        <p>H. Dhake, A. Agarwal, <a href="https://openreview.net/pdf?id=Jdk8o63wyP" target="_blank" rel="noopener noreferrer">On the Robustness of Drug Abuse Face Classification</a>, ICLR TinyPapers, 2024. (h5-index: 304)</p>
+        <p>SaiAsrith BEVNM, A. Agarwal, On the Effectiveness of a Hybrid Model for Volatility Prediction, IEEE International Conference on Machine Learning and Applications, 2024</p>
+        <p>K. Bhesra, A. Agarwal, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78119-3_14" target="_blank" rel="noopener noreferrer">A Multi-Modal Framework to Counter Hate Speeches</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 197-207</p>
+        <p>A. Yadav, V. Pareek, A. Agarwal, S. Chaudhury, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78183-4_18" target="_blank" rel="noopener noreferrer">Neural Encoding of Odors: Translating Odors into Unique Digital Representation with EEG Signals</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 280-295</p>
+        <p>U. Rathore, A. Agarwal, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78341-8_9" target="_blank" rel="noopener noreferrer">An Unconstrained Dataset for Face Recognition Across Distance, Pose, and Resolution</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 127-144</p>
+        <p>A. Agarwal, M. Uzair, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78498-9_5" target="_blank" rel="noopener noreferrer">Robustness of Classifiers for AI-Generated Text Detectors For Copyright and Privacy Protected Society</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 55-71</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78169-8_3" target="_blank" rel="noopener noreferrer">Supervised Mixup: Protecting the Likely Classes for Adversarial Robustness</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 30-45</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78107-0_21" target="_blank" rel="noopener noreferrer">Restoring Noisy Images using Dual-tail Encoder-Decoder Signal Separation Network</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 329-345</p>
+        <p>H. Dhake, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744470" target="_blank" rel="noopener noreferrer">Enhancing Drug Abuse Face Recognition: A Study on Image Corruption and Restoration</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-8</p>
+        <p>V. Kumar, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744463" target="_blank" rel="noopener noreferrer">Are Object Recognition Models Effective and Unbiased for Biometric Recognition?</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-10</p>
+        <p>M. RA, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744471" target="_blank" rel="noopener noreferrer">Benchmarking In-the-wild Soft Biometric Attribute Identification</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-8</p>
+        <p>M. Dosi, U. Rathore, C. Chiranjeev, A. Agarwal, R. Singh, M Vatsa, <a href="https://ieeexplore.ieee.org/document/10744440" target="_blank" rel="noopener noreferrer">Is Face Super Resolution Truly Pushing the Boundaries of Face Recognition?</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-9</p>
+        <p>A. Agarwal, N. Ratha, <a href="https://ieeexplore.ieee.org/document/10648209" target="_blank" rel="noopener noreferrer">Face Morphing Detection in Social Media Content</a>, IEEE International Conference on Image Processing (ICIP), pp. 801-806, 2024 (h5-index: 66)</p>
+        <p>A. Agarwal, N. Ratha, <a href="https://openaccess.thecvf.com/content/CVPR2024W/DFAD/papers/Agarwal_Deepfake_Catcher_Can_a_Simple_Fusion_be_Effective_and_Outperform_CVPRW_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Deepfake Catcher: Can a Simple Fusion be Effective and Outperform Complex DNNs?</a>, CVPR Workshop and Challenge on DeepFake Analysis and Detection (CVPRW), 2024, pp. 3791-3801 (h5-index: 115) </p>
+        <p>H. Dhake, A. Agarwal, <a href="https://openaccess.thecvf.com/content/CVPR2024W/ABAW/papers/Dhake_Unravelling_Robustness_of_Deep_Face_Recognition_Networks_Against_Illicit_Drug_CVPRW_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Unravelling Robustness of Deep Face Recognition Networks Against Illicit Drug Abuse Images</a>, CVPR Workshop and Competition on Affective Behavior Analysis in-the-wild (CVPRW), 2024, pp. 4842-4848 (h5-index: 115)</p>
+        <p>A. Agarwal, N. Ratha, <a href="https://brosdocs.net/fg2024/061.pdf" target="_blank" rel="noopener noreferrer">Deepfake: Classifiers, Fairness, and Demographically Robust Algorithm, IEEE International</a>, Conference on Automatic Face and Gesture Recognition, 2024, pp. 1-9 (h5-index: 43)</p>
+        <p>S. Kundu, S. Swarnkar, and A. Agarwal, <a href="https://meetingorganizer.copernicus.org/EGU24/EGU24-1117.html" target="_blank" rel="noopener noreferrer">Application of Machine-Learning Based Models for Prediction of Suspended Sediment Load in the Indian Peninsular River Basin</a>, EGU General Assembly, Vienna, Austria, EGU24-1117, https://doi.org/10.5194/egusphere-egu24-1117, 2024</p>
+      </div>
+      <!-- Workshops Section -->
+      <!-- <h2>Workshops</h2>
+      <div class="publication-list">
+        <p>P. Rai, P. Pal, A. Agarwal, <em>A Generalized Semiconductor Wafer Defect Classifier</em>, In [Workshop Name], 2024, (DOI: [DOI])</p>
+      </div>
+      <hr> -->
     </div>
   </main>
 
@@ -239,13 +239,12 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // JavaScript to toggle between publication years using filter buttons
+    // Toggle publication year filter
     function showYear(year) {
       const years = document.querySelectorAll('.publication-year');
       years.forEach(y => y.classList.add('hidden'));
       document.getElementById(year).classList.remove('hidden');
 
-      // Update button styles for visual feedback
       const buttons = document.querySelectorAll('.filter-bar .btn');
       buttons.forEach(btn => {
         btn.classList.remove('btn-primary');
