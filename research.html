@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Innovations</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/navbarActive.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <style>
-    /* Additional page-specific styling for the Research Gallery and List */
+    /* Additional page-specific styling for the Research Topics list */
     .innovations-heading {
       font-size: 2.5rem;
       color: #2c3e50;
       margin-bottom: 30px;
       text-align: center;
       font-weight: bold;
-      /* Removed text-transform so that it shows as written */
       letter-spacing: 1px;
       border-bottom: 3px solid #4ca1af;
       padding-bottom: 10px;
@@ -36,7 +38,7 @@
     .research-topics li:last-child {
       border-bottom: none;
     }
-    /* Research Gallery Styling */
+    /* Student Posters Section Styling */
     .research-gallery h2 {
       font-size: 2rem;
       color: #2c3e50;
@@ -48,36 +50,67 @@
     .research-gallery .card {
       margin-bottom: 20px;
       transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
     }
     .research-gallery .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     .research-gallery .card-img-top {
-      height: 300px;
-      object-fit: cover;
+      height: 200px;
+      object-fit: contain;
+      padding: 20px;
+      background-color: #ffffff;
     }
     .research-gallery .card-title {
       font-size: 1.25rem;
       color: #2c3e50;
+      margin-bottom: 10px;
     }
-    .research-gallery .card-text {
-      font-size: 0.95rem;
-      color: #424242;
+    /* Modal adjustments */
+    .modal-lg {
+      max-width: 90%;
+    }
+    .modal-body {
+      height: 80vh;
+      padding: 0;
+    }
+    .modal-body img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .download-btn {
+      margin: 15px;
     }
   </style>
 </head>
+
 <body>
-  <!-- Include Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position: sticky; top:0; z-index:1050;">
+  <!-- Navbar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+    style="position: sticky; top: 0; z-index: 1050;"
+  >
     <div class="container-fluid">
       <a class="navbar-brand" href="research.html">
-        <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
+        <img
+          src="assets/img/logo.jpg"
+          alt="Lab Logo"
+          width="100"
+          height="100"
+        />
         Trustworthy BiometraVision Lab
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -110,51 +143,988 @@
       <li>Novel Deep Learning Architectures &amp; Theory</li>
       <li>3D Computer Vision (NeRF, etc.)</li>
     </ul>
-    
-    <!-- Research Gallery Section -->
+
+    <!-- Student Posters Section -->
     <section class="research-gallery mt-5">
-      <h2>Research Gallery</h2>
+      <h2>Recent Research Posters</h2>
       <div class="row">
-        <!-- Research Card 1 -->
+        <!-- Poster Card 1: Ashish Kumar -->
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card">
-            <img src="assets/img/research_images/biometrics.jpg" class="card-img-top" alt="Project 1">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-ashish"
+          >
+            <img
+              src="assets/img/research_images/21058_Ashish_kumar.jpg"
+              class="card-img-top"
+              alt="Ashish Kumar Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Ashish Kumar</h5>
+              <p class="card-text">Scanning the Threat: Unveiling QR Code Scanner Vulnerabilities in the Digital Age</p>
+            </div>
           </div>
         </div>
-        <!-- Research Card 2 -->
+
+        <!-- Poster Card 2: Gargi Yeole -->
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card">
-            <img src="assets/img/research_images/architecture_wacv.png" class="card-img-top" alt="Project 2">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-gargi"
+          >
+            <img
+              src="assets/img/research_images/21110_Gargi_Yeole_Poster.jpg"
+              class="card-img-top"
+              alt="Gargi Yeole Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Gargi Yeole</h5>
+              <p class="card-text">Family Resemblane or Fraud? Face Morphing Attack on Kinship Verification</p>
+            </div>
           </div>
         </div>
-        <!-- Research Card 3 -->
+
+        <!-- Poster Card 3: Ritika Jain -->
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card">
-            <img src="assets/img/research_images/vishesh_ijcb.png" class="card-img-top" alt="Project 3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-ritika"
+          >
+            <img
+              src="assets/img/research_images/21223_Ritika_Jain_BS_Thesis_Poster.jpg"
+              class="card-img-top"
+              alt="Ritika Jain Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Ritika Jain</h5>
+              <p class="card-text">Improving ImageNet Sketch Recognition and Domain Generalization through Image Processing Techniques</p>
+            </div>
           </div>
         </div>
-        <!-- Research Card 4 -->
+
+        <!-- Poster Card 4: Shalvika Srivastav -->
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card">
-            <img src="assets/img/research_images/akshay_sa.png" class="card-img-top" alt="Project 4">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-shalvika"
+          >
+            <img
+              src="assets/img/research_images/21247_Shalvika_Srivastav_Thesis_Poster_final_2.pptx_page-0001.jpg"
+              class="card-img-top"
+              alt="Shalvika Srivastav Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Shalvika Srivastav</h5>
+              <p class="card-text">Securing Biometrics : Detecting Morphing in Kinship Face Verification</p>
+            </div>
           </div>
         </div>
-        <!-- Add more research cards as needed -->
+
+        <!-- Poster Card 5: Akshat Pandey -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-akshat"
+          >
+            <img
+              src="assets/img/research_images/Akshat_Pandey_poster_page-0001.jpg"
+              class="card-img-top"
+              alt="Akshat Pandey Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Akshat Pandey</h5>
+              <p class="card-text">PMI (Post Mortem Interval) Estimation Using Forensic Iris Images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 6: Arjita -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-arjita"
+          >
+            <img
+              src="assets/img/research_images/Arjita.jpg"
+              class="card-img-top"
+              alt="Arjita Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Arjita</h5>
+              <p class="card-text">Bridging the Domain Gap: Pediatric Pneumonia Classification using Adult Knowledge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 7: Aryan Kumar -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-aryan"
+          >
+            <img
+              src="assets/img/research_images/Aryan_Sharper_Faces_Poster.jpg"
+              class="card-img-top"
+              alt="Aryan Kumar Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Aryan Kumar</h5>
+              <p class="card-text">Sharper Faces: Wavelet-Enhanced Super-Resolution for Reliable Low-Resolution Face Verification</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 8: Ayush Kumar -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-ayush"
+          >
+            <img
+              src="assets/img/research_images/Ayush Poster MS_page-0001.jpg"
+              class="card-img-top"
+              alt="Ayush Kumar Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Ayush Kumar</h5>
+              <p class="card-text">Enhancing Network Robustness using Better Calibration</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 9: Gurleen Kaur -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-gurleen"
+          >
+            <img
+              src="assets/img/research_images/GurleenKaur_Poster.jpg"
+              class="card-img-top"
+              alt="Gurleen Kaur Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Gurleen Kaur</h5>
+              <p class="card-text">Machine Translation For Low Resource Languges - Mundari</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 10: Khushi Choudhary -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-khushi"
+          >
+            <img
+              src="assets/img/research_images/Khushi Poster_page-0001.jpg"
+              class="card-img-top"
+              alt="Khushi Choudhary Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Khushi Choudhary</h5>
+              <p class="card-text">Dual-Encoder Image Feature Fusion for Brain Tumor Classification</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 11: Mohit Kumar -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-mohit"
+          >
+            <img
+              src="assets/img/research_images/Mohit_20323_MS_Thesis.jpg"
+              class="card-img-top"
+              alt="Mohit Kumar Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Mohit Kumar</h5>
+              <p class="card-text">Cross-Pose and Expression-Invariant Face Recognition Using GAN-Driven Style Adaptation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 12: Rohit Kumar -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-rohit"
+          >
+            <img
+              src="assets/img/research_images/Rohit_Kumar_20230-poster.jpg"
+              class="card-img-top"
+              alt="Rohit Kumar Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Rohit Kumar</h5>
+              <p class="card-text">Deep Learning for High-Resolution and Reliable Precipitation Fields</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 13: Shambhuraje -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-shambhuraje"
+          >
+            <img
+              src="assets/img/research_images/Shambhuraje_poster.jpg"
+              class="card-img-top"
+              alt="Shambhuraje Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Shambhuraje</h5>
+              <p class="card-text">Smart Scans: ML-Powered Fake QR Detection with Human Insight & Adversarial Defense</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Card 14: Siddhi Pravin -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div
+            class="card h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-siddhi"
+          >
+            <img
+              src="assets/img/research_images/Siddhi_Pravin_Lipare_Poster_SMILE-2_page-0001.jpg"
+              class="card-img-top"
+              alt="Siddhi Pravin Poster"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Siddhi Pravin</h5>
+              <p class="card-text">Improving Image Tampering Detection: A Hybrid Approach Using Frequency and Spatial Domain Features</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Include Footer -->
+  <!-- Footer Placeholder -->
   <div id="footer-placeholder"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ======================================
+       Modals for Each Poster (Preview + Download)
+       ====================================== -->
+
+  <!-- Modal: Ashish Kumar -->
+  <div
+    class="modal fade"
+    id="modal-ashish"
+    tabindex="-1"
+    aria-labelledby="modalAshishLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAshishLabel">
+            Ashish Kumar – Scanning the Threat: Unveiling QR Code Scanner Vulnerabilities in the Digital Age
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/21058_Ashish_kumar.jpg"
+            alt="Ashish Kumar Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/21058_Ashish_kumar.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Gargi Yeole -->
+  <div
+    class="modal fade"
+    id="modal-gargi"
+    tabindex="-1"
+    aria-labelledby="modalGargiLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGargiLabel">
+            Gargi Yeole – Family Resemblane or Fraud? Face Morphing Attack on Kinship Verification
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/21110_Gargi_Yeole_Poster.jpg"
+            alt="Gargi Yeole Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/21110_Gargi_Yeole_Poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Ritika Jain -->
+  <div
+    class="modal fade"
+    id="modal-ritika"
+    tabindex="-1"
+    aria-labelledby="modalRitikaLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRitikaLabel">
+            Ritika Jain – Improving ImageNet Sketch Recognition and Domain Generalization through Image Processing Techniques
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/21223_Ritika_Jain_BS_Thesis_Poster.jpg"
+            alt="Ritika Jain Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/21223_Ritika_Jain_BS_Thesis_Poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Shalvika Srivastav -->
+  <div
+    class="modal fade"
+    id="modal-shalvika"
+    tabindex="-1"
+    aria-labelledby="modalShalvikaLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalShalvikaLabel">
+            Shalvika Srivastav – Securing Biometrics : Detecting Morphing in Kinship Face Verification
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/21247_Shalvika_Srivastav_Thesis_Poster_final_2.pptx_page-0001.jpg"
+            alt="Shalvika Srivastav Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/21247_Shalvika_Srivastav_Thesis_Poster_final_2.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Akshat Pandey -->
+  <div
+    class="modal fade"
+    id="modal-akshat"
+    tabindex="-1"
+    aria-labelledby="modalAkshatLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAkshatLabel">
+            Akshat Pandey – PMI (Post Mortem Interval) Estimation Using Forensic Iris Images
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Akshat_Pandey_poster_page-0001.jpg"
+            alt="Akshat Pandey Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Akshat_Pandey_poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Arjita -->
+  <div
+    class="modal fade"
+    id="modal-arjita"
+    tabindex="-1"
+    aria-labelledby="modalArjitaLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalArjitaLabel">
+            Arjita – Bridging the Domain Gap: Pediatric Pneumonia Classification using Adult Knowledge
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Arjita.jpg"
+            alt="Arjita Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Arjita.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Aryan Kumar -->
+  <div
+    class="modal fade"
+    id="modal-aryan"
+    tabindex="-1"
+    aria-labelledby="modalAryanLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAryanLabel">
+            Aryan Kumar – Sharper Faces: Wavelet-Enhanced Super-Resolution for Reliable Low-Resolution Face Verification
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Aryan_Sharper_Faces_Poster.jpg"
+            alt="Aryan Kumar Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Aryan_Sharper_Faces_Poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Ayush Kumar -->
+  <div
+    class="modal fade"
+    id="modal-ayush"
+    tabindex="-1"
+    aria-labelledby="modalAyushLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAyushLabel">
+            Ayush Kumar – Enhancing Network Robustness using Better Calibration
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Ayush Poster MS_page-0001.jpg"
+            alt="Ayush Kumar Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Ayush Poster MS.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Gurleen Kaur -->
+  <div
+    class="modal fade"
+    id="modal-gurleen"
+    tabindex="-1"
+    aria-labelledby="modalGurleenLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGurleenLabel">
+            Gurleen Kaur – Machine Translation For Low Resource Languges - Mundari
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/GurleenKaur_Poster.jpg"
+            alt="Gurleen Kaur Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/GurleenKaur_Poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Khushi Choudhary -->
+  <div
+    class="modal fade"
+    id="modal-khushi"
+    tabindex="-1"
+    aria-labelledby="modalKhushiLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalKhushiLabel">
+            Khushi Choudhary – Dual-Encoder Image Feature Fusion for Brain Tumor Classification
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Khushi Poster_page-0001.jpg"
+            alt="Khushi Choudhary Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Khushi Poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Mohit Kumar -->
+  <div
+    class="modal fade"
+    id="modal-mohit"
+    tabindex="-1"
+    aria-labelledby="modalMohitLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMohitLabel">
+            Mohit Kumar – Cross-Pose and Expression-Invariant Face Recognition Using GAN-Driven Style Adaptation
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Mohit_20323_MS_Thesis.jpg"
+            alt="Mohit Kumar Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Mohit_20323_MS_Thesis.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Rohit Kumar -->
+  <div
+    class="modal fade"
+    id="modal-rohit"
+    tabindex="-1"
+    aria-labelledby="modalRohitLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRohitLabel">
+            Rohit Kumar – Deep Learning for High-Resolution and Reliable Precipitation Fields
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Rohit_Kumar_20230-poster.jpg"
+            alt="Rohit Kumar Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Rohit_Kumar_20230-poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Shambhuraje -->
+  <div
+    class="modal fade"
+    id="modal-shambhuraje"
+    tabindex="-1"
+    aria-labelledby="modalShambhurajeLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalShambhurajeLabel">
+            Shambhuraje – Smart Scans: ML-Powered Fake QR Detection with Human Insight & Adversarial Defense
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Shambhuraje_poster.jpg"
+            alt="Shambhuraje Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Shambhuraje_poster.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Siddhi Pravin -->
+  <div
+    class="modal fade"
+    id="modal-siddhi"
+    tabindex="-1"
+    aria-labelledby="modalSiddhiLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-md-down modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSiddhiLabel">
+            Siddhi Pravin – Improving Image Tampering Detection: A Hybrid Approach Using Frequency and Spatial Domain Features
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="assets/img/research_images/Siddhi_Pravin_Lipare_Poster_SMILE-2_page-0001.jpg"
+            alt="Siddhi Pravin Poster (Full Preview)"
+            class="img-fluid"
+            style="max-height: 80vh; width: 100%; object-fit: contain;"
+          />
+        </div>
+        <div class="modal-footer">
+          <a
+            href="assets/img/research_images/Siddhi_Pravin_Lipare_Poster_SMILE-2.pptx"
+            class="btn btn-primary download-btn"
+            download
+          >
+            Download PPTX
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (for Modal functionality) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
   <script>
     fetch("partials/navbar.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+      .then((res) => res.text())
+      .then((data) =>
+        document.getElementById("navbar-placeholder").innerHTML = data
+      );
     fetch("partials/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+      .then((res) => res.text())
+      .then((data) =>
+        document.getElementById("footer-placeholder").innerHTML = data
+      );
   </script>
 </body>
 </html>
