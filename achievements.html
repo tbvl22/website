@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achievements & Activities</title>
+
+  <!-- Bootstrap CSS & Icons (same stack as home.html) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Optional: auto highlight active nav -->
+  <script src="assets/js/navbarActive.js" defer></script>
+</head>
+<body class="aa-page">
+
+  <!-- NAVBAR (same structure as home.html, now with Achievements link) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">
+        <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
+        Trustworthy BiometraVision Lab
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+
+          <!-- ✅ NEW MENU ITEM -->
+          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <main class="aa-wrap">
+    <!-- Hero + filters + counters -->
+    <section class="aa-hero">
+      <div>
+        <h1>Achievements & Activities</h1>
+        <p>Showcasing awards, grants, invited talks, hackathons, outreach, workshops, and the moments that make our group vibrant.</p>
+
+        <div class="aa-controls" id="aa-filters">
+          <span class="aa-chip active" data-filter="all">All</span>
+          <span class="aa-chip" data-filter="achievement">Achievements</span>
+          <span class="aa-chip" data-filter="activity">Activities</span>
+          <span class="aa-chip" data-filter="award">Awards/Grants</span>
+          <span class="aa-chip" data-filter="talk">Media Recognition</span>
+        </div>
+      </div>
+
+      <div class="aa-hero-card">
+        <div class="aa-stats">
+          <div class="aa-stat">
+            <h3 id="aa-count-all">0</h3>
+            <p>Total Highlights</p>
+          </div>
+          <div class="aa-stat">
+            <h3 id="aa-count-achev">0</h3>
+            <p>Achievements</p>
+          </div>
+          <div class="aa-stat">
+            <h3 id="aa-count-activ">0</h3>
+            <p>Activities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="aa-grid" id="aa-grid">
+      <!-- Sample cards — duplicate and replace with your images/text (or use local assets) -->
+
+      <article class="aa-card" data-tags="achievement, award">
+        <img src="assets/img/Achievements/patch_dectector.jpeg" alt="Patch Detector">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Media Recogition</span>
+          <h3 class="aa-title"></h3>
+          <p class="aa-desc">A Patch detector that will detection manipulations in images and videos.</p>
+        </div>
+      </article>  
+
+
+      <article class="aa-card" data-tags="achievement, award">
+        <img src="assets/img/Achievements/Vishesh_achiev.jpeg" alt="Mehta Rice Award">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Achievements</span>
+          <h3 class="aa-title">Mehta Rice Engineering Scholar Program</h3>
+          <p class="aa-desc">The MRESP recognizes outstanding graduate students who demonstrate exceptional potential in research and innovation. As part of this program, Vishesh will have the unique opportunity to collaborate with leading researchers, inventors, and entrepreneurs—a remarkable step forward in his academic and professional journey.</p>
+        </div>
+      </article>  
+
+      <article class="aa-card" data-tags="achievement, award">
+        <img src="assets/img/Achievements/Aarthi_achiev.jpeg" alt="Outstanding Reviewer Award">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Award</span>
+          <h3 class="aa-title">Outstanding Reviewer Award @ IJCB 2025</h3>
+          <p class="aa-desc">Recognized as an outstanding reviewer at the prestigious IEEE Joint Conference on Biometrics.</p>
+        </div>
+      </article>
+
+      <!-- <article class="aa-card" data-tags="activity, workshop">
+        <img src="https://images.unsplash.com/photo-1529336953121-a0ce9a9e7153?q=80&w=1200&auto=format&fit=crop" alt="Workshop">
+        <div class="aa-meta">
+          <span class="aa-badge">🧑‍🏫 Workshop</span>
+          <h3 class="aa-title">Hands-on Workshop on Diffusion Models</h3>
+          <p class="aa-desc">Participants built and trained a tiny diffusion pipeline from scratch.</p>
+        </div>
+      </article> -->
+
+      <!-- <article class="aa-card" data-tags="achievement, talk">
+        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Invited Talk">
+        <div class="aa-meta">
+          <span class="aa-badge">🎤 Talk</span>
+          <h3 class="aa-title">Invited Talk @ ABC Institute</h3>
+          <p class="aa-desc">Keynote on unlearnable images as privacy shields.</p>
+        </div>
+      </article> -->
+
+      <!-- <article class="aa-card" data-tags="activity, outreach">
+        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop" alt="Outreach">
+        <div class="aa-meta">
+          <span class="aa-badge">🌱 Outreach</span>
+          <h3 class="aa-title">AI & Society Outreach Day</h3>
+          <p class="aa-desc">Engaging with students on ethical AI and privacy.</p>
+        </div>
+      </article> -->
+
+      <article class="aa-card" data-tags="award">
+        <img src="assets/img/Achievements/AIC_Seed.jpg" alt="Grant">
+        <div class="aa-meta">
+          <span class="aa-badge">💡 Grant</span>
+          <h3 class="aa-title">Seed Grant for Face Privacy R&D</h3>
+          <p class="aa-desc">Got a Rs. 2 lakh startup grant for the incubation of the startup under the scheme convert yur Ph.D. journey into a startup.</p>
+        </div>
+      </article>
+
+      <!-- <article class="aa-card" data-tags="activity, workshop">
+        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="Hackathon">
+        <div class="aa-meta">
+          <span class="aa-badge">⚙️ Hackathon</span>
+          <h3 class="aa-title">24-hr PrivacyTech Build Sprint</h3>
+          <p class="aa-desc">Prototype of an unlearnable face image generator.</p>
+        </div>
+      </article> -->
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="aa-modal" id="aa-modal" aria-hidden="true">
+    <div class="aa-modal-inner">
+      <button class="aa-close" id="aa-close" aria-label="Close">✕ Close</button>
+      <img src="" alt="" id="aa-modal-img">
+      <div class="aa-modal-caption">
+        <strong id="aa-modal-title"></strong>
+        <div id="aa-modal-desc" class="aa-modal-desc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <p class="mb-0">&copy; 2025 Trustworthy BiometraVision Lab. All Rights Reserved.</p>
+      <div class="visitor-counter">
+        <i class="bi bi-eye-fill" style="font-size: 1.5rem; color: #ffcc00;"></i>
+        <span id="impression-counter" style="font-size: 1.2rem; font-weight: bold; color: #ffffff;" class="ms-1">—</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Page logic for filters/lightbox -->
+  <script src="assets/js/achievements.js"></script>
+  <!-- (If you want the counter on this page too) -->
+  <script src="assets/js/counter.js"></script>
+</body>
+</html>
