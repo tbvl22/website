@@ -7,7 +7,7 @@
     const cards = Array.from(document.querySelectorAll('.aa-card'));
     const countAll = document.getElementById('aa-count-all');
     const countAch = document.getElementById('aa-count-achev');
-    const countAct = document.getElementById('aa-count-activ');
+    const countAct = document.getElementById('aa-count-award');
 
     function updateCounts() {
       const visible = cards.filter(c => c.style.display !== 'none');
