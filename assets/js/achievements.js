@@ -5,15 +5,23 @@
   document.addEventListener('DOMContentLoaded', () => {
     const chips = Array.from(document.querySelectorAll('.aa-chip'));
     const cards = Array.from(document.querySelectorAll('.aa-card'));
-    const countAll = document.getElementById('aa-count-all');
-    const countAch = document.getElementById('aa-count-achev');
-    const countAct = document.getElementById('aa-count-award');
+    const countAll   = document.getElementById('aa-count-all');
+    const countAch   = document.getElementById('aa-count-achev');
+    const countMedia = document.getElementById('aa-count-media');
+
+    function hasTag(card, key) {
+      return (card.getAttribute('data-tags') || '')
+        .toLowerCase()
+        .split(',')
+        .map(s => s.trim())
+        .includes(key);
+    }
 
     function updateCounts() {
       const visible = cards.filter(c => c.style.display !== 'none');
-      if (countAll) countAll.textContent = visible.length;
-      if (countAch) countAch.textContent = visible.filter(c => (c.dataset.tags || '').includes('achievement')).length;
-      if (countAct) countAct.textContent = visible.filter(c => (c.dataset.tags || '').includes('activity')).length;
+      if (countAll)   countAll.textContent   = visible.length;
+      if (countAch)   countAch.textContent   = visible.filter(c => hasTag(c, 'achievement')).length;
+      if (countMedia) countMedia.textContent = visible.filter(c => hasTag(c, 'media')).length;
     }
 
     function setActiveChip(el) {
@@ -24,8 +32,7 @@
     function filterCards(key) {
       cards.forEach(card => {
         if (key === 'all') { card.style.display = ''; return; }
-        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
-        card.style.display = tags.includes(key) ? '' : 'none';
+        card.style.display = hasTag(card, key) ? '' : 'none';
       });
       updateCounts();
     }
@@ -49,11 +56,12 @@
       modalImg.src = img.src;
       modalImg.alt = img.alt;
       modalTitle.textContent = card.querySelector('.aa-title')?.textContent || '';
-      modalDesc.textContent = card.querySelector('.aa-desc')?.textContent || '';
+      modalDesc.textContent  = card.querySelector('.aa-desc')?.textContent || '';
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
+
     function closeModal() {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');

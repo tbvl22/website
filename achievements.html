@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Achievements & Activities</title>
 
-  <!-- Bootstrap CSS & Icons (same stack as home.html) -->
+  <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- Your site CSS -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Optional: auto highlight active nav -->
+  <!-- Active nav highlighter (optional) -->
   <script src="assets/js/navbarActive.js" defer></script>
 </head>
 <body class="aa-page">
 
-  <!-- NAVBAR (same structure as home.html, now with Achievements link) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="home.html">
@@ -39,7 +39,7 @@
           <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
 
-          <!-- ✅ NEW MENU ITEM -->
+          <!-- Achievements link -->
           <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
 
           <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
@@ -77,8 +77,8 @@
             <p>Achievements</p>
           </div>
           <div class="aa-stat">
-            <h3 id="aa-count-award">0</h3>
-            <p>Awards</p>
+            <h3 id="aa-count-media">0</h3>
+            <p>Media</p>
           </div>
         </div>
       </div>
@@ -86,80 +86,88 @@
 
     <!-- Gallery -->
     <section class="aa-grid" id="aa-grid">
-      <!-- Sample cards — duplicate and replace with your images/text (or use local assets) -->
+      <!-- MEDIA -->
+      <article class="aa-card" data-tags="media">
+        <img src="assets/img/Achievements/patch_detector1.jpeg" alt="Patch-based manipulation detector – media coverage">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Media Recognition</span>
+          <h3 class="aa-title">Patch Detector Featured</h3>
+          <p class="aa-desc">A patch-based detector that detects manipulations in images and videos.</p>
+        </div>
+      </article>
 
       <article class="aa-card" data-tags="media">
-        <img src="assets/img/Achievements/patch_dectector.jpeg" alt="Patch Detector">
+        <img src="assets/img/Achievements/patch_detector.jpeg" alt="Patch-based manipulation detector – media coverage">
         <div class="aa-meta">
-          <span class="aa-badge">🏆 Media Recogition</span>
-          <h3 class="aa-title"></h3>
-          <p class="aa-desc">A Patch detector that will detection manipulations in images and videos.</p>
+          <span class="aa-badge">🏆 Media Recognition</span>
+          <h3 class="aa-title">Patch Detector Highlight</h3>
+          <p class="aa-desc">A patch-based detector that detects manipulations in images and videos.</p>
         </div>
-      </article>  
+      </article>
 
-
-      <article class="aa-card" data-tags="achievement">
-        <img src="assets/img/Achievements/Vishesh_achiev.jpeg" alt="Mehta Rice Award">
+      <article class="aa-card" data-tags="media">
+        <img src="assets/img/Achievements/patch_detector2.jpeg" alt="Patch-based manipulation detector – media coverage">
         <div class="aa-meta">
-          <span class="aa-badge">🏆 Achievements</span>
-          <h3 class="aa-title">Mehta Rice Engineering Scholar Program</h3>
-          <p class="aa-desc">The MRESP recognizes outstanding graduate students who demonstrate exceptional potential in research and innovation. As part of this program, Vishesh will have the unique opportunity to collaborate with leading researchers, inventors, and entrepreneurs—a remarkable step forward in his academic and professional journey.</p>
+          <span class="aa-badge">🏆 Media Recognition</span>
+          <h3 class="aa-title">Detector in the News</h3>
+          <p class="aa-desc">A patch-based detector that detects manipulations in images and videos.</p>
         </div>
-      </article>  
+      </article>
 
-      <article class="aa-card" data-tags="award">
-        <img src="assets/img/Achievements/Aarthi_achiev.jpeg" alt="Outstanding Reviewer Award">
+      <article class="aa-card" data-tags="media">
+        <img src="assets/img/Achievements/deepfake_detector.jpeg" alt="Deepfake manipulation detector – media coverage">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Media Recognition</span>
+          <h3 class="aa-title">Deepfake Detector Coverage</h3>
+          <p class="aa-desc">System flags manipulated content across images and videos.</p>
+        </div>
+      </article>
+
+      <article class="aa-card" data-tags="media">
+        <img src="assets/img/Achievements/ear_recognition.jpeg" alt="Ear recognition research – media coverage">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Media Recognition</span>
+          <h3 class="aa-title">Ear Recognition Spotlight</h3>
+          <p class="aa-desc">Media coverage of our ear-based biometric research.</p>
+        </div>
+      </article>
+
+      <article class="aa-card" data-tags="media">
+        <img src="assets/img/Achievements/ear_recogntion1.jpeg" alt="Ear recognition research – media coverage">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Media Recognition</span>
+          <h3 class="aa-title">Biometrics in Focus</h3>
+          <p class="aa-desc">Feature on robustness and reliability of ear recognition.</p>
+        </div>
+      </article>
+
+      <!-- ACHIEVEMENTS / AWARDS -->
+      <article class="aa-card" data-tags="achievement, award">
+        <img src="assets/img/Achievements/Vishesh_achiev.jpeg" alt="Vishesh Rajput – Mehta Rice Engineering Scholar Program">
+        <div class="aa-meta">
+          <span class="aa-badge">🏆 Achievement</span>
+          <h3 class="aa-title">Mehta–Rice Engineering Scholar</h3>
+          <p class="aa-desc">Vishesh selected for MRESP, recognizing exceptional potential in research and innovation with opportunities to collaborate with leading researchers and entrepreneurs.</p>
+        </div>
+      </article>
+
+      <article class="aa-card" data-tags="achievement, award">
+        <img src="assets/img/Achievements/Aarthi_achiev.jpeg" alt="S. Aarthi – Outstanding Reviewer Award at IJCB 2025">
         <div class="aa-meta">
           <span class="aa-badge">🏆 Award</span>
-          <h3 class="aa-title">Outstanding Reviewer Award @ IJCB 2025</h3>
-          <p class="aa-desc">Recognized as an outstanding reviewer at the prestigious IEEE Joint Conference on Biometrics.</p>
+          <h3 class="aa-title">Outstanding Reviewer – IJCB 2025</h3>
+          <p class="aa-desc">S. Aarthi recognized as an Outstanding Reviewer at the IEEE International Joint Conference on Biometrics.</p>
         </div>
       </article>
-
-      <!-- <article class="aa-card" data-tags="activity, workshop">
-        <img src="https://images.unsplash.com/photo-1529336953121-a0ce9a9e7153?q=80&w=1200&auto=format&fit=crop" alt="Workshop">
-        <div class="aa-meta">
-          <span class="aa-badge">🧑‍🏫 Workshop</span>
-          <h3 class="aa-title">Hands-on Workshop on Diffusion Models</h3>
-          <p class="aa-desc">Participants built and trained a tiny diffusion pipeline from scratch.</p>
-        </div>
-      </article> -->
-
-      <!-- <article class="aa-card" data-tags="achievement, talk">
-        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Invited Talk">
-        <div class="aa-meta">
-          <span class="aa-badge">🎤 Talk</span>
-          <h3 class="aa-title">Invited Talk @ ABC Institute</h3>
-          <p class="aa-desc">Keynote on unlearnable images as privacy shields.</p>
-        </div>
-      </article> -->
-
-      <!-- <article class="aa-card" data-tags="activity, outreach">
-        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop" alt="Outreach">
-        <div class="aa-meta">
-          <span class="aa-badge">🌱 Outreach</span>
-          <h3 class="aa-title">AI & Society Outreach Day</h3>
-          <p class="aa-desc">Engaging with students on ethical AI and privacy.</p>
-        </div>
-      </article> -->
 
       <article class="aa-card" data-tags="award">
-        <img src="assets/img/Achievements/AIC_Seed.jpg" alt="Grant">
+        <img src="assets/img/Achievements/AIC_Seed.jpg" alt="Seed Grant for face privacy R&D">
         <div class="aa-meta">
           <span class="aa-badge">💡 Grant</span>
-          <h3 class="aa-title">Seed Grant for Face Privacy R&D</h3>
-          <p class="aa-desc">Got a Rs. 2 lakh startup grant for the incubation of the startup under the scheme convert your Ph.D. journey into a startup.</p>
+          <h3 class="aa-title">Seed Grant for Face Privacy R&amp;D</h3>
+          <p class="aa-desc">Atul Kumar has received a ₹2 lakh startup grant for incubating a startup under the scheme “Convert your Ph.D. journey into a startup”.</p>
         </div>
       </article>
-
-      <!-- <article class="aa-card" data-tags="activity, workshop">
-        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="Hackathon">
-        <div class="aa-meta">
-          <span class="aa-badge">⚙️ Hackathon</span>
-          <h3 class="aa-title">24-hr PrivacyTech Build Sprint</h3>
-          <p class="aa-desc">Prototype of an unlearnable face image generator.</p>
-        </div>
-      </article> -->
     </section>
   </main>
 
@@ -188,9 +196,7 @@
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Page logic for filters/lightbox -->
   <script src="assets/js/achievements.js"></script>
-  <!-- (If you want the counter on this page too) -->
   <script src="assets/js/counter.js"></script>
 </body>
 </html>
