@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Useful Links</title>
+  <title>Resources | Trustworthy BiometraVision Lab</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/navbarActive.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Navbar Active Script -->
+  <script src="assets/js/navbarActive.js"></script>
 </head>
+
 <body>
-  <!-- Include Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
+
+  <!-- ================= Navbar ================= -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+       style="position:sticky; top:0; z-index:1050;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="resources">
+      <a class="navbar-brand" href="resources.html">
         <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
         Trustworthy BiometraVision Lab
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
@@ -29,50 +38,87 @@
           <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
           <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">Achievements & Activities</a>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="resources.html">Resources</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  
-  <!-- Main Content -->
+
+  <!-- ================= Main Content ================= -->
   <main class="py-5">
     <div class="container">
-      <h1 class="mb-4 text-center">Useful Links</h1>
-      
+
+      <h1 class="mb-5 text-center">Useful Resources</h1>
+
       <div class="row justify-content-center">
-        <!-- Resource Card 1 -->
+
+        <!-- ===== Resource 1: Deepfake Detection Tool ===== -->
         <div class="col-md-4">
           <div class="resource-card card mb-4">
-            <img src="assets/img/resources_imgs/deepfake-technology.webp" class="card-img-top" alt="Resource 1 Logo">
+            <img src="assets/img/resources_imgs/deepfake-technology.webp"
+                 class="card-img-top"
+                 alt="Deepfake Detection Tool">
             <div class="card-body">
               <h5 class="card-title">Deepfake Detection Tool</h5>
-              <p class="card-text">Through this deepfake detection tool you can upload any image and check whether the image is deepfake or not.</p>
-              <a href="https://huggingface.co/spaces/tbvl/Fake_Face_Detection" class="btn btn-primary" target="_blank">Visit Resource</a>
+              <p class="card-text">
+                Upload an image to check whether it is real or generated using deepfake technology.
+              </p>
+              <a href="https://huggingface.co/spaces/tbvl/Fake_Face_Detection"
+                 class="btn btn-primary"
+                 target="_blank">
+                Visit Resource
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- ===== Resource 2: Google Form ===== -->
+        <div class="col-md-4">
+          <div class="resource-card card mb-4">
+            <img src="assets/img/resources_imgs/google-form.png"
+                 class="card-img-top"
+                 alt="Submit Resource Form">
+            <div class="card-body">
+              <h5 class="card-title">Request Computational Resources</h5>
+              <p class="card-text">
+                Educational and research institutes can request access to our
+                high-performance computational infrastructure for academic,
+                research, and collaborative purposes.
+              </p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmYa2tEHdwYcA65Nf6AEqLhkfvJgeO-xfIsChSACkyT5UtJA/viewform?usp=dialog"
+                 class="btn btn-primary"
+                 target="_blank">
+                Open Google Form
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
-      
-      <div class="alert alert-info text-center" role="alert">
-        Stay tuned! New resources will be added soon.
+
+      <!-- Info Alert -->
+      <div class="alert alert-info text-center mt-4" role="alert">
+        Stay tuned! More resources and tools will be added soon.
       </div>
+
     </div>
   </main>
-  
-  <!-- Include Footer -->
+
+  <!-- ================= Footer ================= -->
   <div id="footer-placeholder"></div>
-  
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
-    fetch("partials/navbar.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
     fetch("partials/footer.html")
       .then(response => response.text())
       .then(data => document.getElementById("footer-placeholder").innerHTML = data);
   </script>
+
 </body>
 </html>

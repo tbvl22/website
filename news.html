@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News</title>
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/navbarActive.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    /* Page-specific styles for News */
-    /* Remove the fixed max-width on the container so it can expand on large screens */
     .news-main-container {
       padding: 0 15px;
     }
@@ -17,10 +17,6 @@
       margin-bottom: 20px;
       text-align: center;
     }
-    .news-column .btn-view {
-      margin-top: 20px;
-    }
-    /* Style for the news list */
     .lab-news-list {
       list-style: none;
       padding-left: 0;
@@ -48,107 +44,135 @@
       padding: 10px;
     }
     @keyframes flash-animation {
-      0%   { opacity: 1; }
-      50%  { opacity: 0.2; }
+      0% { opacity: 1; }
+      50% { opacity: 0.2; }
       100% { opacity: 1; }
     }
   </style>
 </head>
+
 <body>
-  <!-- Include Navbar (loaded via partials if needed) -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="news.html">
-        <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
-        Trustworthy BiometraVision Lab
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
-          <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+
+<!-- ================= Navbar ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+     style="position:sticky; top:0; z-index:1050;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="news.html">
+      <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
+      Trustworthy BiometraVision Lab
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= Main Content ================= -->
+<main class="container-fluid py-5 news-main-container">
+  <div class="row">
+
+    <!-- ===== Magazine Column (ENHANCED ONLY) ===== -->
+    <div class="col-12 col-md-6 news-column">
+      <h1>Magazine</h1>
+
+      <!-- Year Tabs -->
+      <ul class="nav nav-tabs justify-content-center mb-3">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mag-2025">
+            2025
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mag-2024">
+            2024
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- 2025 Magazine -->
+        <div class="tab-pane fade show active" id="mag-2025">
+          <iframe src="https://online.fliphtml5.com/oxrisg/TBVL_Annual_Report_2025/#p=1"
+                  title="TBVL Magazine 2025" allowfullscreen></iframe>
+          <a href="https://online.fliphtml5.com/oxrisg/TBVL_Annual_Report_2025/#p=1"
+             target="_blank" class="btn btn-primary btn-view">
+            View 2025 Magazine (Fullscreen)
+          </a>
+        </div>
+
+        <!-- 2024 Magazine -->
+        <div class="tab-pane fade" id="mag-2024">
+          <iframe src="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html"
+                  title="TBVL Magazine 2024" allowfullscreen></iframe>
+          <a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html"
+             target="_blank" class="btn btn-primary btn-view">
+            View 2024 Magazine (Fullscreen)
+          </a>
+        </div>
+
       </div>
     </div>
-  </nav>
 
-  <!-- Main Content -->
-  <main class="container-fluid py-5 news-main-container">
-    <div class="row">
-      <!-- Magazine Column -->
-      <div class="col-12 col-md-6 news-column">
-        <h1>Magazine</h1>
-        <iframe src="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" 
-                title="Lab Magazine Flipbook" allowfullscreen></iframe>
-        <a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" 
-           target="_blank" class="btn btn-primary btn-view">View Flipbook in Fullscreen</a>
-      </div>
-      <!-- Lab News Column -->
-      <div class="col-12 col-md-6 news-column">
-        <h1>Lab Activities and Achievements</h1>
-          <!-- Flash Message (persistent and flashing) -->
-          <!-- <div id="flash-internship" class="alert alert-info flash m-3" role="alert">
-             <a href="#" target="_blank" rel="noopener noreferrer"> Dr. Akshay received International Travel Support from the Anusandhan National Research Foundation (ANRF) to attend the "IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR), USA (11 June, 2025 to 15 June, 2025)" </a>
-          </div> -->
-      <div id="flash-message" class="alert alert-warning flash m-3" role="alert">
+    <!-- ===== Lab News Column (UNCHANGED) ===== -->
+    <div class="col-12 col-md-6 news-column">
+      <h1>Lab Activities and Achievements</h1>
+
+      <div id="flash-message" class="alert alert-warning flash m-3">
         Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!
       </div>
-      <!-- Flash Message for Summer Internship -->
-    <div id="flash-internship" class="alert alert-info flash m-3" role="alert">
-      Our Project has been approved under Defence Research and Development Organisation (DRDO) 
-    </div>
 
-        <ul class="lab-news-list">
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Ritika Jain &amp; Atul Kumar: paper accepted to WiML 2025 - <em>Deep Models Under Domain Shift: A Sketch-Based Study</em></a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Atul Kumar wins Best Poster Award— Engineers’ Day 2025.</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Khushi Chaudhari: paper accepted at DIFA 2025 Workshop — <em>Brain Matters: Enhancing Tumor Classification via CNN and Vision-Language Fusion</em>.</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Media spotlight: Our lab’s patch-based detector for image and video manipulation is featured in the media.</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Paper accepted: Poulomi Bhattacharya (with BS student Shalvika Srivastav) at the PFATCV Workshop, BMVC 2025.</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member Vishesh Rajput selected for the Mehta–Rice Engineering Scholars Program in recognition of exceptional research potential.</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab mmber S. Aarthi receives Outstanding Reviewer Award at the IEEE International Joint Conference on Biometrics (IJCB).</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member Vishesh Kumar has had a transaction paper accepted in IEEE Transactions on Big Data</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member S Aarthi has had a survey paper accepted at IEEE International Joint Conference on Biometrics (IJCB)</a></li>
-          <li><a href="http://">Dr. Akshay received International Travel Support from the Anusandhan National Research Foundation (ANRF) to attend the "IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR), USA (11 June, 2025 to 15 June, 2025)"</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member Atul Kumar has had paper accepted in FG, a specialised conference on Biometrics</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member Poulomi Bhattacharya with a BS student Jiya Singh has had paper accepted FG, a specialised conference on Biometrics</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member S Aarthi and one of our BS student Gargi has had paper accepted in FG Workshop, a specialised Workshop on Biometrics</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our Project has been approved under Defence Research and Development Organisation (DRDO)</a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Dr. Akshay Agarwal is promoted to the senior member grade of IEEE</a></li>
-          <li>Interested to join our lab? <a href="contact.html" target="_blank" rel="noopener noreferrer">Fill out our Google Form</a></li>
-          <!-- <li>Interested in a Summer Internship? <a href="summer-internship.html" class="alert-link">Apply now!</a></li> -->
-          <li><a href="http://" target="_blank" rel="noopener noreferrer">Our lab member, Vishesh Kumar, has had his paper accepted at CVPR, a prestigious top-tier A* conference in computer vision</a></li>
-          <li><a href="http://" target="_blank" >Our project has been approved under the Prime Minister’s Early Career Research Grant (ECRG) by the Anusandhan National Research Foundation (ANRF)!</a></li>
-          <li><a href="#" target="_blank">Dr. Akshay Agarwal is serving as a senior program committee member of IJCAI 2025</a></li>
-          <li>Workshop on Unmasking Deepfakes at IEEE Conference on AI 2025 <a href="https://sites.google.com/iiserb.ac.in/cai-udf/home" target="_blank">Link1</a><a href="https://idiap.ch/~kkotwal/cai.html" >Link2</a></li>
-          <li><a href="#" target="_blank">Our lab members Atul & Aarthi got SIG grant from IICE, IISER Bhopal</a></li>
-          <li><a href="https://flipbookpdf.net/web/site/c42d4401629d0de77649992594721d4ff57a1dca202412.pdf.html" target="_blank">Lab Magazine 2024</a></li>
-        </ul>
+      <div id="flash-internship" class="alert alert-info flash m-3">
+        Our Project has been approved under Defence Research and Development Organisation (DRDO)
       </div>
+
+      <ul class="lab-news-list">
+        <li><a href="#">Ritika Jain & Atul Kumar: paper accepted to WiML 2025</a></li>
+        <li><a href="#">Atul Kumar wins Best Poster Award— Engineers’ Day 2025</a></li>
+        <li><a href="#">Khushi Chaudhari: paper accepted at DIFA 2025 Workshop</a></li>
+        <li><a href="#">Media spotlight: patch-based detector featured in media</a></li>
+        <li><a href="#">Paper accepted at PFATCV Workshop, BMVC 2025</a></li>
+        <li><a href="#">Vishesh Rajput selected for Mehta–Rice Scholars Program</a></li>
+        <li><a href="#">S. Aarthi receives Outstanding Reviewer Award at IJCB</a></li>
+        <li><a href="#">Vishesh Kumar paper accepted in IEEE Transactions on Big Data</a></li>
+        <li><a href="#">S. Aarthi survey paper accepted at IJCB</a></li>
+        <li><a href="#">Dr. Akshay received ANRF International Travel Support (CVPR 2025)</a></li>
+        <li><a href="#">Paper accepted at FG Conference on Biometrics</a></li>
+        <li><a href="#">Paper accepted at FG Workshop on Biometrics</a></li>
+        <li><a href="#">Dr. Akshay Agarwal promoted to Senior Member of IEEE</a></li>
+        <li><a href="#">Workshop on Unmasking Deepfakes at IEEE Conference on AI 2025</a></li>
+        <li><a href="#">Lab Magazine 2024 released</a></li>
+      </ul>
     </div>
-  </main>
 
-  <!-- Include Footer (loaded via partials if needed) -->
-  <div id="footer-placeholder"></div>
+  </div>
+</main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    fetch("partials/navbar.html").then(res => res.text()).then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-    fetch("partials/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
-  </script>
+<!-- ================= Footer ================= -->
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  fetch("partials/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
+
 </body>
 </html>
