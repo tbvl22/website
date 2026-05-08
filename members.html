@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,17 @@
   <script src="assets/js/navbarActive.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- Include Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="members">
+      <a class="navbar-brand" href="home.html">
         <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
         Trustworthy BiometraVision Lab
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -27,7 +28,6 @@
           <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
           <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
           <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
@@ -40,283 +40,544 @@
   <!-- Main Content -->
   <main>
     <div class="container py-5 members-container">
-      <!-- Supervisor Section -->
-      <h1 class="members-section-heading">Supervisor</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <a href="https://sites.google.com/iiitd.ac.in/agarwalakshay/home" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/akshay.jpeg" alt="Akshay Agarwal">
-            <div class="info">
-              <h3>Dr. Akshay Agarwal</h3>
-              <p>akagarwal@iiserb.ac.in</p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <!-- Detailed supervisor card -->
-            <div class="info" style="position: static; background: none; color: #2c3e50; padding: 20px;">
-              <h3>Dr. Akshay Agarwal</h3>
-              <p>Email: <a href="mailto:akagarwal@iiserb.ac.in">akagarwal@iiserb.ac.in</a></p>
-              <p>Phone: +91-9560978994</p>
-              <p>Office Address: 310 A AB4 (Therm) Building, Department of Data Science & Engineering, IISER Bhopal</p>
-              <p>Research Interests: Fair and Trustworthy AI/ML; Biometrics Recognition; Generative Algorithms; Deep Learning in CV; Medical; Brain Image Analysis; NLP/Speech.</p>
-              <p><a href="https://sites.google.com/iiitd.ac.in/agarwalakshay/home" target="_blank">Personal Website</a></p>
-              <p><a href="https://scholar.google.co.in/citations?user=LrW6Hb4AAAAJ&hl=en" target="_blank">Google Scholar Profile</a></p>
-            </div>
+      <div class="row members-main-row">
+        <div class="col-lg-3 members-sidebar-col">
+          <div class="members-sidebar">
+            <h2 class="sidebar-title">Explore Members</h2>
+            <ul class="sidebar-nav">
+              <li><a href="#phd-scholars">PhD Scholars</a></li>
+              <li><a href="#ms-students">MS Students</a></li>
+              <li><a href="#jrf-interns">JRF and Interns</a></li>
+              <li><a href="#alumni">Alumni</a></li>
+            </ul>
           </div>
         </div>
-      </div>
+        <div class="col-lg-9 members-content">
+          <!-- Supervisor Section -->
+          <h1 class="members-section-heading">Supervisor</h1>
+          <div class="row">
+            <div class="col-md-5">
+              <a href="https://sites.google.com/iiitd.ac.in/agarwalakshay/home" target="_blank"
+                class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/akshay.jpeg" alt="Akshay Agarwal">
+                  <div class="info">
+                    <h3>Dr. Akshay Agarwal</h3>
+                    <p>akagarwal@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-7">
+              <div class="member-card">
+                <!-- Detailed supervisor card -->
+                <div class="info"
+                  style="position: static; background: none; color: #2c3e50; padding: 20px; text-align: left;">
+                  <h3>Dr. Akshay Agarwal</h3>
+                  <p>Email: <a href="mailto:akagarwal@iiserb.ac.in">akagarwal@iiserb.ac.in</a></p>
+                  <p>Phone: +91-9560978994</p>
+                  <p>Office Address: 310 A AB4 (Therm) Building, Department of Data Science & Engineering, IISER Bhopal
+                  </p>
+                  <p>Research Interests: Fair and Trustworthy AI/ML; Biometrics Recognition; Generative Algorithms; Deep
+                    Learning in CV; Medical; Brain Image Analysis; NLP/Speech.</p>
+                  <p><a href="https://sites.google.com/iiitd.ac.in/agarwalakshay/home" target="_blank">Personal
+                      Website</a></p>
+                  <p><a href="https://scholar.google.co.in/citations?user=LrW6Hb4AAAAJ&hl=en" target="_blank">Google
+                      Scholar Profile</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <hr class="my-5">
+          <hr class="my-5">
 
-      <!-- PhD Scholars Section -->
-      <h1 class="members-section-heading">PhD Scholars</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <a href="https://visheshrajput2408.github.io/vishesh.github.io/" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/vishesh.jpg" alt="Vishesh Kumar">
-            <div class="info">
-              <h3>Vishesh Kumar</h3>
-              <p>vishesh22@iiserb.ac.in</p>
+          <!-- PhD Scholars Section -->
+          <h1 class="members-section-heading" id="phd-scholars">PhD Scholars</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <a href="https://visheshrajput2408.github.io/vishesh.github.io/" target="_blank"
+                class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/vishesh.jpg" alt="Vishesh Kumar">
+                  <div class="info">
+                    <h3>Vishesh Kumar</h3>
+                    <p>vishesh22@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://atulkr05.github.io/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/atul.jpg" alt="Atul Kumar">
+                  <div class="info">
+                    <h3>Atul Kumar</h3>
+                    <p>atulk23@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://pavanrajak.github.io/pavan/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/pavan.jpeg" alt="Pavan Rajak">
+                  <div class="info">
+                    <h3>Pavan Rajak</h3>
+                    <p>pavan23@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://saarthi25.github.io/S_Aarthi/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/aarthi.jpg" alt="S Aarthi">
+                  <div class="info">
+                    <h3>S Aarthi</h3>
+                    <p>saarthi24@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://poulomi891.github.io/Poulomi/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/poulomi.jpeg" alt="Poulomi Bhattacharya">
+                  <div class="info">
+                    <h3>Poulomi Bhattacharya</h3>
+                    <p>poulomi24@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://shubhigehlot21.github.io/My_Website/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/shubhi.jpeg" alt="Shubhi Gehlot">
+                  <div class="info">
+                    <h3>Shubhi gehlot</h3>
+                    <p>shubhi24@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://amansinghjee21.github.io/aman.github.io/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/aman.jpeg" alt="Aman Singh">
+                  <div class="info">
+                    <h3>Aman Singh</h3>
+                    <p>amans25@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://atulkr05.github.io/" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/atul.jpg" alt="Atul Kumar">
-            <div class="info">
-              <h3>Atul Kumar</h3>
-              <p>atulk23@iiserb.ac.in</p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://pavanrajak.github.io/pavan/" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/pavan.jpeg" alt="Pavan Rajak">
-            <div class="info">
-              <h3>Pavan Rajak</h3>
-              <p>pavan23@iiserb.ac.in</p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://saarthi25.github.io/S_Aarthi/" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/aarthi.jpg" alt="S Aarthi">
-            <div class="info">
-              <h3>S Aarthi</h3>
-              <p>saarthi24@iiserb.ac.in</p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://poulomi891.github.io/Poulomi/" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/poulomi.jpeg" alt="Poulomi Bhattacharya">
-            <div class="info">
-              <h3>Poulomi Bhattacharya</h3>
-              <p>poulomi24@iiserb.ac.in</p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="https://shubhigehlot21.github.io/My_Website/" target="_blank" class="text-decoration-none">
-          <div class="member-card">
-            <img src="assets/img/shubhi.jpeg" alt="Shubhi Gehlot">
-            <div class="info">
-              <h3>Shubhi gehlot</h3>
-              <p>shubhi24@iiserb.ac.in</p>
-            </div>
-          </div>
-          </a>
-        </div>
-      </div>
 
-      <hr class="my-5">
+          <hr class="my-5">
 
-      <!-- Graduate Students Section -->
-      <h1 class="members-section-heading">Graduate Students</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Sharayu.jpg" alt="Sharayu">
-            <div class="info">
-              <h3>Sharayu Borade</h3>
-              <p>borade21@iiserb.ac.in</p>
+          <!-- MS Students Section -->
+          <h1 class="members-section-heading" id="ms-students">MS Students</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="member-card">
+                <img src="assets/img/Sharayu.jpg" alt="Sharayu">
+                <div class="info">
+                  <h3>Sharayu Borade</h3>
+                  <p>borade21@iiserb.ac.in</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="member-card">
+                <img src="assets/img/Gurleen.jpg" alt="Gurleen">
+                <div class="info">
+                  <h3>Gurleen Kaur</h3>
+                  <p>gurleen21@iiserb.ac.in</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="member-card">
+                <img src="assets/img/Khushi.jpg" alt="Khushi">
+                <div class="info">
+                  <h3>Khushi Chaudhari</h3>
+                  <p>khushi21@iiserb.ac.in</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="member-card">
+                <img src="assets/img/Gargi.jpg" alt="Gargi">
+                <div class="info">
+                  <h3>Gargi Surendra Yeole</h3>
+                  <p>surendra21@iiserb.ac.in</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="member-card">
+                <img src="assets/img/Ashish.jpg" alt="Ashish">
+                <div class="info">
+                  <h3>Ashish Kumar</h3>
+                  <p>ashish21@iiserb.ac.in</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="member-card">
+                <img src="assets/img/Ritika.jpg" alt="Ritika">
+                <div class="info">
+                  <h3>Ritika Jain</h3>
+                  <p>ritika21@iiserb.ac.in</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Gurleen.jpg" alt="Gurleen">
-            <div class="info">
-              <h3>Gurleen Kaur</h3>
-              <p>gurleen21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Khushi.jpg" alt="Khushi">
-            <div class="info">
-              <h3>Khushi Chaudhari</h3>
-              <p>khushi21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Gargi.jpg" alt="Gargi">
-            <div class="info">
-              <h3>Gargi Surendra Yeole</h3>
-              <p>surendra21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Ashish.jpg" alt="Ashish">
-            <div class="info">
-              <h3>Ashish Kumar</h3>
-              <p>ashish21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Ritika.jpg" alt="Ritika">
-            <div class="info">
-              <h3>Ritika Jain</h3>
-              <p>ritika21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <hr class="my-5">
+          <hr class="my-5">
 
-      <!-- Project Associate Section -->
-      <!-- <h1 class="members-section-heading">Project Associate</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/ankit.jpeg" alt="Ankit Birla">
-            <div class="info">
-              <h3>Ankit Birla</h3>
-              <p>ankit@iiserb.ac.in</p>
+          <!-- JRF and Interns Section -->
+          <h1 class="members-section-heading" id="jrf-interns">JRF and Interns</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <a href="https://ron-desa.github.io/rounak-portfolio/" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/Rounak.jpeg" alt="Project Associate">
+                  <div class="info">
+                    <h3>ROUNAK MUKHOPADHYAY</h3>
+                    <p>rounakm@iiserb.ac.in</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://github.com/AHANA-CHANDA" target="_blank" class="text-decoration-none">
+                <div class="member-card">
+                  <img src="assets/img/social_media_images/female_avatar.png" alt="INTERN">
+                  <div class="info">
+                    <h3>AHANA CHANDA</h3>
+                    <p>ahanachanda21@gmail.com</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <hr class="my-5"> -->
+          <hr class="my-5">
 
-      <!-- Undergraduate Students Section -->
-      <!-- <h1 class="members-section-heading">Undergraduate Students</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Akshat_Pandey.jpg" alt="Akshat Pandey">
-            <div class="info">
-              <h3>Akshat Pandey</h3>
-              <p>akshatp21@iiserb.ac.in</p>
+          <!-- Alumni Section -->
+          <h1 class="members-section-heading" id="alumni">Alumni</h1>
+
+          <!-- Alumni: Graduate Students -->
+          <h2 class="section-title text-center mb-4">Graduate Students</h2>
+          <div class="row g-4">
+            <!-- Rohit Kumar -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Rohit.jpg" class="card-img-top" alt="Rohit Kumar"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Rohit Kumar</h5>
+                  <p class="card-text"><strong>Email:</strong> rohitkumar20@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Nagawade Shambhuraje Satish -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/shambhu.jpg" class="card-img-top" alt="Nagawade Shambhuraje Satish"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Nagawade Shambhuraje Satish</h5>
+                  <p class="card-text"><strong>Email:</strong> nagawade20@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Ayush Pandey -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/ayush.jpeg" class="card-img-top" alt="Ayush Pandey"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ayush Pandey</h5>
+                  <p class="card-text"><strong>Email:</strong> ayush20@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Mohit -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Mohit.jpeg" class="card-img-top" alt="Mohit"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Mohit</h5>
+                  <p class="card-text"><strong>Email:</strong> mohitt20@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Shukla Shivam Ashokbhai -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top"
+                  alt="Shukla Shivam Ashokbhai" style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Shukla Shivam Ashokbhai</h5>
+                  <p class="card-text"><strong>Email:</strong> shivams19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Harshul Raj Surana -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Harshul Raj Surana"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Harshul Raj Surana</h5>
+                  <p class="card-text"><strong>Email:</strong> harshul19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Dhake Hruturaj Mahendra -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top"
+                  alt="Dhake Hruturaj Mahendra" style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Dhake Hruturaj Mahendra</h5>
+                  <p class="card-text"><strong>Email:</strong> hruturaj19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Saragadam Abhiram Laxmi Raj -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top"
+                  alt="Saragadam Abhiram Laxmi Raj" style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Saragadam Abhiram Laxmi Raj</h5>
+                  <p class="card-text"><strong>Email:</strong> abhiram19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jayasri Dharmireddi -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top"
+                  alt="Jayasri Dharmireddi" style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Jayasri Dharmireddi</h5>
+                  <p class="card-text"><strong>Email:</strong> jayasri19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Udaybhan Rathore -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Udaybhan Rathore"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Udaybhan Rathore</h5>
+                  <p class="card-text"><strong>Email:</strong> udaybhan19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Aditya Sneh -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Aditya Sneh"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Aditya Sneh</h5>
+                  <p class="card-text"><strong>Email:</strong> adityas19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Manav Kundal -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Manav Kundal"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Manav Kundal</h5>
+                  <p class="card-text"><strong>Email:</strong> manav19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Archana Yadav -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top" alt="Archana Yadav"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Archana Yadav</h5>
+                  <p class="card-text"><strong>Email:</strong> archana19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Ojaswee -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/boy_avatar.jpg" class="card-img-top" alt="Ojaswee"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ojaswee</h5>
+                  <p class="card-text"><strong>Email:</strong> ojaswee19@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Arjita.jpg" alt="Arjita">
-            <div class="info">
-              <h3>Singh Arjita Satya Prakash</h3>
-              <p>singh21@iiserb.ac.in</p>
+
+          <h2 class="section-title text-center my-4">Undergraduate Students</h2>
+          <div class="row g-4">
+            <!-- Akshat Pandey -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Akshat_Pandey.jpg" class="card-img-top" alt="Akshat Pandey"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Akshat Pandey</h5>
+                  <p class="card-text"><strong>Email:</strong> akshatp21@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Singh Arjita Satya Prakash -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Arjita.jpg" class="card-img-top" alt="Singh Arjita Satya Prakash"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Singh Arjita Satya Prakash</h5>
+                  <p class="card-text"><strong>Email:</strong> singh21@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Siddhi Pravin Lipare -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Siddhi.jpg" class="card-img-top" alt="Siddhi Pravin Lipare"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Siddhi Pravin Lipare</h5>
+                  <p class="card-text"><strong>Email:</strong> siddhi21@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Shalvika Srivastav -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Shalvika.jpeg" class="card-img-top" alt="Shalvika Srivastav"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Shalvika Srivastav</h5>
+                  <p class="card-text"><strong>Email:</strong> shalvika21@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Aryan Jain -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/Aryan.jpg" class="card-img-top" alt="Aryan Jain"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Aryan Jain</h5>
+                  <p class="card-text"><strong>Email:</strong> aryanj21@iiserb.ac.in</p>
+                  <a href="" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Aryan.jpg" alt="Aryan">
-            <div class="info">
-              <h3>Aryan Jain</h3>
-              <p>aryanj21@iiserb.ac.in</p>
+
+          <h2 class="section-title text-center my-4">Project Associate / JRFs</h2>
+          <div class="row g-4">
+            <!-- Ankit Birla -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/ankit.jpeg" class="card-img-top" alt="Ankit Birla"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ankit Birla</h5>
+                  <p class="card-text"><strong>Email:</strong> devankitbirla@gmail.com</p>
+                  <a href="https://www.linkedin.com/in/ankit-birla-9a90071b2/" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Manju RA -->
+            <div class="col-md-4 mb-4">
+              <div class="alumni-card card h-100">
+                <img src="assets/img/social_media_images/female_avatar.png" class="card-img-top" alt="Manju RA"
+                  style="max-height: 220px; object-fit: contain; padding: 10px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Manju RA</h5>
+                  <p class="card-text"><strong>Email:</strong> mailtwomanju@gmail.com</p>
+                  <a href="https://www.linkedin.com/in/manju-r-a-188047214/" class="linkedin-btn" target="_blank">
+                    <img src="assets/img/social_media_images/LinkedIn.png" alt="LinkedIn" width="28">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Ashish.jpg" alt="Ashish">
-            <div class="info">
-              <h3>Ashish Kumar</h3>
-              <p>ashish21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Gargi.jpg" alt="Gargi">
-            <div class="info">
-              <h3>Gargi Surendra Yeole</h3>
-              <p>surendra21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Gurleen.jpg" alt="Gurleen">
-            <div class="info">
-              <h3>Gurleen Kaur</h3>
-              <p>gurleen21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Khushi.jpg" alt="Khushi">
-            <div class="info">
-              <h3>Khushi</h3>
-              <p>khushi21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Ritika.jpg" alt="Ritika">
-            <div class="info">
-              <h3>Ritika Jain</h3>
-              <p>ritika21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Shalvika.jpeg" alt="Shalvika">
-            <div class="info">
-              <h3>Shalvika Srivastav</h3>
-              <p>shalvika21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="member-card">
-            <img src="assets/img/Siddhi.jpg" alt="Siddhi">
-            <div class="info">
-              <h3>Siddhi Pravin Lipare</h3>
-              <p>siddhi21@iiserb.ac.in</p>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </div>
+        </div> <!-- End members-content -->
+      </div> <!-- End members-main-row -->
+    </div> <!-- End container -->
   </main>
 
   <!-- Include Footer -->
@@ -328,4 +589,5 @@
     fetch("partials/footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
   </script>
 </body>
+
 </html>

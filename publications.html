@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,64 +14,77 @@
       margin-bottom: 30px;
       text-align: center;
     }
+
     .filter-bar .btn {
       margin: 0 5px;
       min-width: 120px;
     }
+
     /* Publication Card Header: Enhanced styling */
     .card-header {
       background: linear-gradient(135deg, #2244da, #5f4724) !important;
       color: #ffffff;
       text-align: center;
       padding: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .card-header h3 {
       margin: 0;
       font-size: 2rem;
       font-weight: bold;
     }
+
     .card-header p {
       margin: 5px 0 0;
       font-size: 1.2rem;
       opacity: 0.9;
     }
+
     /* Publication Card Body Layout */
     .card-body .row {
       margin: 0;
     }
-    .pub-details, .pub-figure {
+
+    .pub-details,
+    .pub-figure {
       flex: 0 0 100%;
       max-width: 100%;
       padding: 20px;
     }
+
     @media (min-width: 768px) {
       .pub-details {
         flex: 0 0 40%;
         max-width: 40%;
         padding: 20px;
       }
+
       .pub-figure {
         flex: 0 0 60%;
         max-width: 60%;
         padding: 20px;
       }
     }
+
     .pub-details p {
       text-align: justify;
     }
+
     .pub-figure img {
       max-width: 100%;
       height: auto;
       border-radius: 5px;
     }
+
     /* Styles for continuous citation lists */
     .publication-list p {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 15px;
     }
+
     .publication-year h2 {
       font-size: 1.5rem;
       margin-top: 30px;
@@ -78,14 +92,16 @@
       border-bottom: 2px solid #4ca1af;
       padding-bottom: 5px;
     }
-    .conference-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #ffffff; /* You can change this color if you want a different color */
-}
 
+    .conference-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #ffffff;
+      /* You can change this color if you want a different color */
+    }
   </style>
 </head>
+
 <body>
   <!-- Include Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:sticky; top:0; z-index:1050;">
@@ -94,9 +110,8 @@
         <img src="assets/img/logo.jpg" alt="Lab Logo" width="100" height="100">
         Trustworthy BiometraVision Lab
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -105,7 +120,6 @@
           <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
           <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
           <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements & Activities</a></li>
           <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
@@ -121,261 +135,709 @@
 
     <!-- Filter Bar -->
     <div class="filter-bar">
-      <button class="btn btn-primary" onclick="showYear('2025')">2025</button>
+      <button class="btn btn-primary" onclick="showYear('2026')">2026</button>
+      <button class="btn btn-secondary" onclick="showYear('2025')">2025</button>
       <button class="btn btn-secondary" onclick="showYear('2024')">2024</button>
       <button class="btn btn-secondary" onclick="showYear('2023')">2023</button>
       <button class="btn btn-secondary" onclick="showYear('2022')">2022</button>
     </div>
 
-<!-- Publications for 2025 (Original Card Layout) -->
-<div id="2025" class="publication-year">
-  <div class="row g-4">
-    <!-- Publication Card 1 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="" target="_blank" style="text-decoration: none; color: inherit;">
-              Unmasking the Audio Illusion: A Survey on Spoofing and Deepfake Detection
-            </a>
-          </h3>
-          <p>Aarthi S, and Akshay Agarwal </p>
-          <p><span class="conference-name">IEEE International Joint Conference on Biometrics</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> This paper explores the growing practice of manipulating audio to create fakes using deep learning algorithms. It examines methods like speech synthesis, audio splicing, and voice cloning, and various detection algorithms. The paper also discusses the potential impacts of deepfake audio on reputation, fraud, and misinformation, and compares AI and human detection methods.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/IJCB.png" alt="Paper Figure">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Publication Card 1 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="" target="_blank" style="text-decoration: none; color: inherit;">
-              Robustness Benchmarking of Convolutional and Transformer Architectures for Image Classification
-            </a>
-          </h3>
-          <p>Vishesh Kumar, Shivam Shukla, and Akshay Agarwal </p>
-          <p><span class="conference-name">IEEE Transactions on Big Data</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> A study analyzing deep convolutional neural networks (CNNs) across various classification spectrums, including pure CNNs and state-of-the-art Vision Transformers (ViTs), found that different DNNs have varying levels of robustness against image corruption. ViTs, trained on CIFAR10, are highly robust in handling noise corruptions but vulnerable to environmental corruptions. Pure CNNs, while lower in performance, can handle environmental factors better than noise corruption. The study aims to reveal the vulnerabilities of deep learning models and ensure the deployment of correct networks for real-world image classification.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/Big_data.png" alt="Paper Figure">
+
+    <!-- Publications for 2026 (New Section) -->
+    <div id="2026" class="publication-year hidden">
+      <div class="row g-4">
+        <!-- Publication Card 1 (2026) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Guarding Digital Identity: Attention-Guided Fusion for Detecting Forged ID Documents (Student
+                  Abstract)
+                </a>
+              </h3>
+              <p>Gargi Surendra Yeole, Poulomi Bhattacharya, and Akshay Agarwal</p>
+              <p><span class="conference-name">Proceedings of the AAAI Conference on Artificial Intelligence</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This paper proposes an ID forgery detection framework for government
+                  e-verification pipelines that analyzes mobile-captured ID images and detects highly realistic,
+                  generative forgeries across both facial and textual regions. The method integrates feature fusion and
+                  attention mechanisms over CNNs (ResNet‑50, EfficientNet) and transformers (ViT‑16, Swin Transformer)
+                  to learn robust visual representations for reliable real‑world deployment.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2026/AAAI_SA1.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Publication Card 1 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="" target="_blank" style="text-decoration: none; color: inherit;">
-              Your Face, Your Privacy: Combating Unauthorized Usage
-            </a>
-          </h3>
-          <p>Atul Kumar, Akshay Agarwal, and Nalini Ratha </p>
-          <p><span class="conference-name">IEEE International Conference on Automatic Face and Gesture Recognition (FG)</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> Deep face recognition systems' high performance raises privacy concerns. Users are exploring ways to protect themselves, such as obscuring faces with hands. However, no evaluation exists to show this can bypass face recognition algorithms. A study developed nose and mouth occlusion datasets using synthetic patches and real-life objects. Results showed that patches can fool face recognition networks and soft biometric classifiers, deceiving gender and ethnicity detection.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/fg_atul.png" alt="Paper Figure">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Publication Card 2 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="https://www.sciencedirect.com/science/article/pii/S2214212624002138?dgcid=author" target="_blank" style="text-decoration: none; color: inherit;">
-              Gesture Recognition for Emergencies: Dataset and Cross-Condition Analysis
-            </a>
-          </h3>
-          <p>Jiya Sinha, Poulomi Bhattacharya, Akshay Agarwal </p>
-          <p><span class="conference-name">IEEE International Conference on Automatic Face and Gesture Recognition (FG)</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> Gestures are crucial for nonverbal communication, especially in areas like home automation and medical applications. Research in computer vision, robotics, and HCI has focused on gesture recognition. However, existing studies have limited exploration of Indian ethnicity and gesture capture in nighttime settings. A large-scale hand gesture recognition dataset has been curated, and a benchmark study using state-of-the-art hand detection and gesture classification networks was conducted.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/fg_Jiya.png" alt="Paper Figure">
+        <!-- Publication Card 2 (2026) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  WingBeats and Snapshots: Fusing Sound and Vision for Mosquito Monitoring (Student Abstract)
+                </a>
+              </h3>
+              <p>Ahana Chanda, and Akshay Agarwal</p>
+              <p><span class="conference-name">Proceedings of the AAAI Conference on Artificial Intelligence</span>
+              </p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Accurate mosquito species identification is vital for vector control, yet
+                  visual or acoustic cues alone are often inadequate. This work introduces a multimodal deep-learning
+                  framework that fuses high-resolution images with wingbeat audio via a SwinV2 vision transformer and an
+                  Audio Spectrogram Transformer, exploiting complementary information. On a six-species dataset, it
+                  reaches 97% accuracy, matching the best single-modality baseline while offering greater robustness to
+                  noise and environmental variation for reliable mosquito surveillance.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2026/AAAI_SA2.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Publication Card 1 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="" target="_blank" style="text-decoration: none; color: inherit;">
-              Family Resemblance or Fraud? Face Morphing Attacks on Kinship Verification
-            </a>
-          </h3>
-          <p>Gargi S Yeole, Aarthi S, Shalvika Srivastav, Akshay Agarwal </p>
-          <p><span class="conference-name">Second Workshop on Interdisciplinary Applications of Biometrics and Identity Science in IEEE International Conference on Automatic Face and Gesture Recognition</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> This study explores the vulnerability of deep learning models for kinship verification using facial images, particularly when morphing ratios are used. The researchers used a morphed dataset to test their models on original and morphed child images. The results showed a continuous increase in misclassification rates with the increasing percentage of parental features, highlighting the need for more effective verification methods to counter facial morphing risks in real-world applications.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/fg_aathi.png" alt="Paper Figure">
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- <div class="row g-4"> -->
-    <!-- Publication Card 1 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="" target="_blank" style="text-decoration: none; color: inherit;">
-              Advancing Facial Age Progression for Occluded Faces
-            </a>
-          </h3>
-          <p>Ankit Birla, Akshay Agarwal </p>
-          <p><span class="conference-name">CVPR Workshop and Competition on Affective & Behavior Analysis in-the-wild</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> Face recognition is vulnerable when the age gap between gallery and probe images is high. Accurate age progression is crucial to mitigate this gap and improve face recognition performance. This paper presents a novel approach to facial age progression, addressing occluded faces. Objects occluding the face's key points are detected and inpainted using transformer architecture. This improves facial age progression's robustness and visual quality, making it applicable in security systems and forensic analysis.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/cvpr_ankit.png" alt="Paper Figure">
+        <!-- Publication Card 3 (2026) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Semantic-Guided Sketch-to-RGB Image Generation via Controlled Diffusion for Improved Sketch
+                  Recognition (Student Abstract)
+                </a>
+              </h3>
+              <p>Ritika Jain, Atul Kumar, and Akshay Agarwal</p>
+              <p><span class="conference-name">Proceedings of the AAAI Conference on Artificial Intelligence</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This work introduces a sketch-to-RGB pipeline that uses BLIP-based
+                  semantic captions and Canny edges from a sketch to guide a Stable Diffusion model via ControlNet,
+                  producing photorealistic, identity-preserving images. By training standard CNN and transformer
+                  classifiers on Tiny-ImageNet subsets and testing on sketches, synthesized images, and original RGB
+                  data, the method significantly boosts sketch classification accuracy and generalizes well across
+                  architectures.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2026/AAAI_SA3.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Publication Card 2 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="https://link.springer.com/article/10.1007/s10661-025-14039-w" target="_blank" style="text-decoration: none; color: inherit;">
-              Bayesian‑optimized recursive machine learning for predicting human‑induced changes in suspended sediment transport
-            </a>
-          </h3>
-          <p>Soumya Kundu, Somil Swarnkar, Akshay Agarwal </p>
-          <p><span class="conference-name">Environmental Monitoring and Assessment</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> This study examines historical changes in suspended sediment load (SSL) in the Godavari River Basin, revealing a decline post-1990 due to human activities. Tree-based machine learning models improved SSL prediction accuracy, providing insights for sustainable sediment transport modeling under changing hydrological conditions.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/env_akshay.png" alt="Paper Figure">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Publication Card 1 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Kumar_A_Unified_Resilient_and_Explainable_Adversarial_Patch_Detector_CVPR_2025_paper.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-              A Unified, Resilient, and Explainable Adversarial Patch Detector
-            </a>
-          </h3>
-          <p>Vishesh Kumar, Akshay Agarwal </p>
-          <p><span class="conference-name">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> The AdvPatchXAI is a defense algorithm designed to protect Deep Neural Networks (DNNs) from physical adversarial attacks. It uses a novel patch decorrelation loss, self-supervised learning, and a sparse linear layer for classification. The model improves interpretability and correlation with human vision, closing the semantic gap between latent and pixel space and effectively handling unseen patches, thereby enhancing DNN robustness in practical settings.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/cvpr.png" alt="Paper Figure">
+        <!-- Publication Card 4 (2026) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Traces Left Behind: Deepfake Detection Under the Lens of Iterative Generation
+                </a>
+              </h3>
+              <p>Poulomi Bhattacharya, Akshay Agarwal, and Nalini Ratha</p>
+              <p><span class="conference-name">Proceedings of the Computer Vision and Pattern Recognition Workshop
+                  (AIMS)</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This work investigates a more realistic and powerful threat model in which
+                  attackers sequentially apply multiple heterogeneous generators to create iteratively manipulated
+                  deepfakes, rather than relying on a single model. It analyzes how the composition and ordering of
+                  these generative steps alter visual and representational characteristics, and shows through extensive
+                  experiments that such iterative deepfakes can more easily evade state-of-the-art detectors trained
+                  only on single-step manipulations, revealing a critical vulnerability in current deepfake detection
+                  systems.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2026/CVPRW1.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Publication Card 2 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="https://www.sciencedirect.com/science/article/pii/S2214212624002138?dgcid=author" target="_blank" style="text-decoration: none; color: inherit;">
-              Detection of identity swapping attacks in low-resolution image settings
-            </a>
-          </h3>
-          <p>Akshay Agarwal, Nalini Ratha </p>
-          <p><span class="conference-name">Journal of Information Security and Applications</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> This research proposes a low-resolution identity swap attack detection algorithm to address the challenge of detecting fake face images in low-resolution videos. The algorithm uses artifacts amplification and classification to handle the lack of information content. Extensive evaluations using multiple databases, resolution settings, and attack types demonstrate the strength and effectiveness of the proposed algorithm in in-the-wild settings. The results show superiority compared to existing state-of-the-art works.</p>
+        <!-- Publication Card 5 (2026) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Faces in the Wild: GAN-Driven Normalization for Robust Facial Recognition
+                </a>
+              </h3>
+              <p>Mohit, Atul Kumar, and Akshay Agarwal</p>
+              <p><span class="conference-name">Proceedings of the Computer Vision and Pattern Recognition Workshop
+                  (CVEU)
+                </span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Facial recognition systems often struggle with pose and expression
+                  variations in real-world settings. We propose a two-stage preprocessing pipeline using
+                  Pixel2Style2Pixel for pose normalization and StarGAN for emotion neutralization before recognition. We
+                  evaluate our approach across 10 facial recognition models using DeepFace on the Karolinska Directed
+                  Emotional Faces (KDEF) dataset. The results show significant robustness improvements for lightweight
+                  models while also revealing identity-preservation challenges in high-capacity models, highlighting the
+                  need for adaptive preprocessing strategies.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2026/CVPRW2.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/p1.jpg" alt="Paper Figure">
+        </div>
+        <!-- Publication Card 6 (2026) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Tap, Scan, Exploit: The Hidden Vulnerabilities of Everyday QR Codes
+                </a>
+              </h3>
+              <p>Ashish Kumar, S Aarthi, and Akshay Agarwal</p>
+              <p><span class="conference-name"> IEEE/CVF Computer Vision and Pattern Recognition (CVPR 2026) Findings
+                </span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> QR codes are widely used for payments, marketing, authentication, and
+                  information sharing. However, their decodability is prone to real-world distortions, leading to issues
+                  when users cannot scan QR codes in critical situations. Thus, we bring a rarely explored approach to
+                  investigate QR robustness in several real-life adverse situations. We examine the robustness of QR
+                  code
+                  decoding under 18 distinct image corruption types. We have not only studied the impact of these
+                  distortions but also the effect of local regions of a QR code by modifying QRs at the global and
+                  regional
+                  levels. To pave the way for future secure digital communication involving QR codes, we have conducted
+                  a
+                  preliminary study demonstrating the impact of generative networks on mitigating corruption.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2026/CVPR_findings.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <hr>
     </div>
-    <!-- Publication Card 3 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="https://openaccess.thecvf.com/content/WACV2025/papers/A_On_Which_Data_Distribution_Synthetic_or_Real_We_Should_Rely_WACV_2025_paper.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-              On Which Data Distribution (Synthetic or Real) We Should Rely for Soft Biometric Classification
-            </a>
-          </h3>
-          <p>Manju RA, Atul Kumar, Akshay Agarwal </p>
-          <p><span class="conference-name">Winter Conference on Applications of Computer Vision (WACV)</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> Gender identification is vital for human-computer interaction and identity search. While "real" facial images are standard in gender classification, synthetic images are gaining attention due to privacy concerns and advancements in generative networks. However, their effectiveness remains unclear. This study evaluates the performance of gender classification networks trained on real vs. synthetic face images. Using 8 DNNs, including CNNs and ViTs, across 4 datasets and 6 image corruptions, we also employ Grad-CAM and t-SNE for interpretability.</p>
+    <!-- Publications for 2025 (Original Card Layout) -->
+    <div id="2025" class="publication-year">
+      <div class="row g-4">
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Unmasking the Audio Illusion: A Survey on Spoofing and Deepfake Detection
+                </a>
+              </h3>
+              <p>Aarthi S, and Akshay Agarwal </p>
+              <p><span class="conference-name">IEEE International Joint Conference on Biometrics</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This paper explores the growing practice of manipulating audio to create
+                  fakes using deep learning algorithms. It examines methods like speech synthesis, audio splicing, and
+                  voice cloning, and various detection algorithms. The paper also discusses the potential impacts of
+                  deepfake audio on reputation, fraud, and misinformation, and compares AI and human detection methods.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/IJCB.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/p2.png" alt="Paper Figure">
+        </div>
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Robustness Benchmarking of Convolutional and Transformer Architectures for Image Classification
+                </a>
+              </h3>
+              <p>Vishesh Kumar, Shivam Shukla, and Akshay Agarwal </p>
+              <p><span class="conference-name">IEEE Transactions on Big Data</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> A study analyzing deep convolutional neural networks (CNNs) across various
+                  classification spectrums, including pure CNNs and state-of-the-art Vision Transformers (ViTs), found
+                  that different DNNs have varying levels of robustness against image corruption. ViTs, trained on
+                  CIFAR10, are highly robust in handling noise corruptions but vulnerable to environmental corruptions.
+                  Pure CNNs, while lower in performance, can handle environmental factors better than noise corruption.
+                  The study aims to reveal the vulnerabilities of deep learning models and ensure the deployment of
+                  correct networks for real-world image classification.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/Big_data.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Your Face, Your Privacy: Combating Unauthorized Usage
+                </a>
+              </h3>
+              <p>Atul Kumar, Akshay Agarwal, and Nalini Ratha </p>
+              <p><span class="conference-name">IEEE International Conference on Automatic Face and Gesture Recognition
+                  (FG)</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Deep face recognition systems' high performance raises privacy concerns.
+                  Users are exploring ways to protect themselves, such as obscuring faces with hands. However, no
+                  evaluation exists to show this can bypass face recognition algorithms. A study developed nose and
+                  mouth occlusion datasets using synthetic patches and real-life objects. Results showed that patches
+                  can fool face recognition networks and soft biometric classifiers, deceiving gender and ethnicity
+                  detection.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/fg_atul.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 2 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://www.sciencedirect.com/science/article/pii/S2214212624002138?dgcid=author"
+                  target="_blank" style="text-decoration: none; color: inherit;">
+                  Gesture Recognition for Emergencies: Dataset and Cross-Condition Analysis
+                </a>
+              </h3>
+              <p>Jiya Sinha, Poulomi Bhattacharya, Akshay Agarwal </p>
+              <p><span class="conference-name">IEEE International Conference on Automatic Face and Gesture Recognition
+                  (FG)</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Gestures are crucial for nonverbal communication, especially in areas like
+                  home automation and medical applications. Research in computer vision, robotics, and HCI has focused
+                  on gesture recognition. However, existing studies have limited exploration of Indian ethnicity and
+                  gesture capture in nighttime settings. A large-scale hand gesture recognition dataset has been
+                  curated, and a benchmark study using state-of-the-art hand detection and gesture classification
+                  networks was conducted.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/fg_Jiya.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Family Resemblance or Fraud? Face Morphing Attacks on Kinship Verification
+                </a>
+              </h3>
+              <p>Gargi S Yeole, Aarthi S, Shalvika Srivastav, Akshay Agarwal </p>
+              <p><span class="conference-name">Second Workshop on Interdisciplinary Applications of Biometrics and
+                  Identity Science in IEEE International Conference on Automatic Face and Gesture Recognition</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This study explores the vulnerability of deep learning models for kinship
+                  verification using facial images, particularly when morphing ratios are used. The researchers used a
+                  morphed dataset to test their models on original and morphed child images. The results showed a
+                  continuous increase in misclassification rates with the increasing percentage of parental features,
+                  highlighting the need for more effective verification methods to counter facial morphing risks in
+                  real-world applications.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/fg_aathi.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row g-4"> -->
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Advancing Facial Age Progression for Occluded Faces
+                </a>
+              </h3>
+              <p>Ankit Birla, Akshay Agarwal </p>
+              <p><span class="conference-name">CVPR Workshop and Competition on Affective & Behavior Analysis
+                  in-the-wild</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Face recognition is vulnerable when the age gap between gallery and probe
+                  images is high. Accurate age progression is crucial to mitigate this gap and improve face recognition
+                  performance. This paper presents a novel approach to facial age progression, addressing occluded
+                  faces. Objects occluding the face's key points are detected and inpainted using transformer
+                  architecture. This improves facial age progression's robustness and visual quality, making it
+                  applicable in security systems and forensic analysis.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/cvpr_ankit.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 2 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://link.springer.com/article/10.1007/s10661-025-14039-w" target="_blank"
+                  style="text-decoration: none; color: inherit;">
+                  Bayesian‑optimized recursive machine learning for predicting human‑induced changes in suspended
+                  sediment transport
+                </a>
+              </h3>
+              <p>Soumya Kundu, Somil Swarnkar, Akshay Agarwal </p>
+              <p><span class="conference-name">Environmental Monitoring and Assessment</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This study examines historical changes in suspended sediment load (SSL) in
+                  the Godavari River Basin, revealing a decline post-1990 due to human activities. Tree-based machine
+                  learning models improved SSL prediction accuracy, providing insights for sustainable sediment
+                  transport modeling under changing hydrological conditions.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/env_akshay.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Kumar_A_Unified_Resilient_and_Explainable_Adversarial_Patch_Detector_CVPR_2025_paper.pdf"
+                  target="_blank" style="text-decoration: none; color: inherit;">
+                  A Unified, Resilient, and Explainable Adversarial Patch Detector
+                </a>
+              </h3>
+              <p>Vishesh Kumar, Akshay Agarwal </p>
+              <p><span class="conference-name">IEEE/CVF Conference on Computer Vision and Pattern Recognition
+                  (CVPR)</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> The AdvPatchXAI is a defense algorithm designed to protect Deep Neural
+                  Networks (DNNs) from physical adversarial attacks. It uses a novel patch decorrelation loss,
+                  self-supervised learning, and a sparse linear layer for classification. The model improves
+                  interpretability and correlation with human vision, closing the semantic gap between latent and pixel
+                  space and effectively handling unseen patches, thereby enhancing DNN robustness in practical settings.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/cvpr.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 2 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://www.sciencedirect.com/science/article/pii/S2214212624002138?dgcid=author"
+                  target="_blank" style="text-decoration: none; color: inherit;">
+                  Detection of identity swapping attacks in low-resolution image settings
+                </a>
+              </h3>
+              <p>Akshay Agarwal, Nalini Ratha </p>
+              <p><span class="conference-name">Journal of Information Security and Applications</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This research proposes a low-resolution identity swap attack detection
+                  algorithm to address the challenge of detecting fake face images in low-resolution videos. The
+                  algorithm uses artifacts amplification and classification to handle the lack of information content.
+                  Extensive evaluations using multiple databases, resolution settings, and attack types demonstrate the
+                  strength and effectiveness of the proposed algorithm in in-the-wild settings. The results show
+                  superiority compared to existing state-of-the-art works.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/p1.jpg" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 3 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://openaccess.thecvf.com/content/WACV2025/papers/A_On_Which_Data_Distribution_Synthetic_or_Real_We_Should_Rely_WACV_2025_paper.pdf"
+                  target="_blank" style="text-decoration: none; color: inherit;">
+                  On Which Data Distribution (Synthetic or Real) We Should Rely for Soft Biometric Classification
+                </a>
+              </h3>
+              <p>Manju RA, Atul Kumar, Akshay Agarwal </p>
+              <p><span class="conference-name">Winter Conference on Applications of Computer Vision (WACV)</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Gender identification is vital for human-computer interaction and identity
+                  search. While "real" facial images are standard in gender classification, synthetic images are gaining
+                  attention due to privacy concerns and advancements in generative networks. However, their
+                  effectiveness remains unclear. This study evaluates the performance of gender classification networks
+                  trained on real vs. synthetic face images. Using 8 DNNs, including CNNs and ViTs, across 4 datasets
+                  and 6 image corruptions, we also employ Grad-CAM and t-SNE for interpretability.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/p2.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Publication Card 4 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="https://example.com/2025_paper2" target="_blank"
+                  style="text-decoration: none; color: inherit;">
+                  PrecipFormer: Efficient Transformer for Precipitation Downscaling
+                </a>
+              </h3>
+              <p>R. Kumar, T. Sharma, V. Vaghela, S. Jha, A. Agarwal </p>
+              <p><span class="conference-name">Winter Conference on Applications of Computer Vision (WACV)
+                  Workshops</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> Precipitation downscaling is a crucial challenge in climate modeling and
+                  hydrological applications. This paper introduces PrecipFormer, a computationally efficient transformer
+                  architecture designed for this task. It builds upon the Low-to-High Multi-Level Vision Transformer
+                  mechanism, enabling parallel processing of features at multiple spatial scales and reducing
+                  computational overhead. PrecipFormer achieves superior performance compared to state-of-the-art
+                  baselines.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/2025/PrecipFormer.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 1 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Secure Neural Architectures for Biometric Template Protection
+                </a>
+              </h3>
+              <p>Dummy Author 1, Dummy Author 2, and Akshay Agarwal</p>
+              <p><span class="conference-name">IEEE Transactions on Information Forensics and Security 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> We propose a new class of neural architectures designed to protect
+                  biometric templates from reconstruction attacks. By integrating cryptographic primitives directly into
+                  the network's layers, we ensure that sensitive biometric information remains secure even if the
+                  model's weights are compromised.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 2 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Cross-Modal Deepfake Detection: Combining Visual and Audio Cues
+                </a>
+              </h3>
+              <p>Dummy Author 3, Dummy Author 4, and Akshay Agarwal</p>
+              <p><span class="conference-name">ACM Multimedia 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This paper presents a cross-modal framework for deepfake detection that
+                  leverages synchronization between visual and audio features. By identifying subtle discrepancies
+                  between lip movements and speech signals, our model achieves high accuracy in detecting sophisticated
+                  multi-modal manipulations.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 3 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Fairness-Aware Face Recognition in Diverse Populations
+                </a>
+              </h3>
+              <p>Dummy Author 5, Dummy Author 6, and Akshay Agarwal</p>
+              <p><span class="conference-name">CVPR 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> We address the issue of demographic bias in face recognition systems. Our
+                  approach involves a fairness-aware loss function that balances performance across different age,
+                  gender, and ethnicity groups, leading to more equitable and trustworthy AI systems.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 4 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Adversarial Attacks on Medical Imaging: A Comprehensive Review
+                </a>
+              </h3>
+              <p>Dummy Author 7, Dummy Author 8, and Akshay Agarwal</p>
+              <p><span class="conference-name">IEEE Access 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This review paper summarizes the current state of adversarial attacks in
+                  the medical imaging domain. We categorize various attack vectors and discuss their potential impact on
+                  clinical diagnosis and treatment planning, highlighting the urgent need for robust defense mechanisms.
+                </p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 5 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Self-Supervised Learning for Small-Scale Biometric Datasets
+                </a>
+              </h3>
+              <p>Dummy Author 9, Dummy Author 10, and Akshay Agarwal</p>
+              <p><span class="conference-name">ECCV 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> We investigate the effectiveness of self-supervised learning for biometric
+                  recognition in scenarios with limited labeled data. Our experimental results show that self-supervised
+                  pre-training significantly improves performance on several small-scale biometric benchmarks.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 6 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Generative Models for Synthetic Biometric Data Generation
+                </a>
+              </h3>
+              <p>Dummy Author 11, Dummy Author 12, and Akshay Agarwal</p>
+              <p><span class="conference-name">NeurIPS 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This paper introduces a new generative model for creating highly realistic
+                  synthetic biometric data. Our model can generate diverse samples that preserve the statistical
+                  properties of real data, enabling the training of robust biometric systems while respecting privacy
+                  constraints.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 7 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Lightweight Deep Learning for Edge Biometrics
+                </a>
+              </h3>
+              <p>Dummy Author 13, Dummy Author 14, and Akshay Agarwal</p>
+              <p><span class="conference-name">ICIP 2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> We propose a lightweight deep learning framework for biometric recognition
+                  on resource-constrained edge devices. By employing model pruning and quantization, we achieve
+                  significant reductions in model size and latency with minimal impact on accuracy.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dummy Publication 8 (2025) -->
+        <div class="col-12">
+          <div class="publication-item card h-100">
+            <div class="card-header">
+              <h3>
+                <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+                  Robust Audio Deepfake Detection in the Wild
+                </a>
+              </h3>
+              <p>Dummy Author 15, Dummy Author 16, and Akshay Agarwal</p>
+              <p><span class="conference-name">IEEE Transactions on Biometrics, Behavior, and Identity Science
+                  2025</span></p>
+            </div>
+            <div class="card-body d-flex flex-wrap">
+              <div class="pub-details">
+                <p><strong>Abstract:</strong> This study addresses the challenge of detecting audio deepfakes in
+                  uncontrolled, real-world environments. We introduce a large-scale dataset of diverse audio
+                  manipulations and benchmark several state-of-the-art detection models against environmental noise and
+                  channel distortions.</p>
+              </div>
+              <div class="pub-figure d-flex align-items-center justify-content-center">
+                <img src="assets/img/publications/placeholder.png" alt="Paper Figure">
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <hr>
     </div>
-    <!-- Publication Card 4 (2025) -->
-    <div class="col-12">
-      <div class="publication-item card h-100">
-        <div class="card-header">
-          <h3>
-            <a href="https://example.com/2025_paper2" target="_blank" style="text-decoration: none; color: inherit;">
-              PrecipFormer: Efficient Transformer for Precipitation Downscaling
-            </a>
-          </h3>
-          <p>R. Kumar, T. Sharma, V. Vaghela, S. Jha, A. Agarwal </p>
-          <p><span class="conference-name">Winter Conference on Applications of Computer Vision (WACV) Workshops</span></p>
-        </div>
-        <div class="card-body d-flex flex-wrap">
-          <div class="pub-details">
-            <p><strong>Abstract:</strong> Precipitation downscaling is a crucial challenge in climate modeling and hydrological applications. This paper introduces PrecipFormer, a computationally efficient transformer architecture designed for this task. It builds upon the Low-to-High Multi-Level Vision Transformer mechanism, enabling parallel processing of features at multiple spatial scales and reducing computational overhead. PrecipFormer achieves superior performance compared to state-of-the-art baselines.</p>
-          </div>
-          <div class="pub-figure d-flex align-items-center justify-content-center">
-            <img src="assets/img/publications/2025/PrecipFormer.png" alt="Paper Figure">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-</div>
 
 
 
@@ -384,33 +846,91 @@
       <!-- Journals Section -->
       <h2>Journals</h2>
       <div class="publication-list">
-        <p>R. Uikey, H. R. Lone, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10562197" target="_blank" rel="noopener noreferrer">Indian Traffic Sign Detection and Classification Through a Unified Framework</a>, In IEEE Transactions on Intelligent Transportation Systems, 2024, vol. 25, no. 10, pp. 14866-14875, (DOI: 10.1109/TITS.2024.3411117) (Impact Factor: 7.9) (h5-index: 143)</p>
-        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://www.sciencedirect.com/science/article/pii/S0893608023006585" target="_blank" rel="noopener noreferrer">Corruption Depth: Analysis of DNN depth for Misclassification</a>, In Neural Networks, 2024, vol. 172, pp. 106013. (Impact Factor: 6.0) (h5-index: 95) (SSRN Link)</p>
+        <p>R. Uikey, H. R. Lone, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10562197" target="_blank"
+            rel="noopener noreferrer">Indian Traffic Sign Detection and Classification Through a Unified Framework</a>,
+          In IEEE Transactions on Intelligent Transportation Systems, 2024, vol. 25, no. 10, pp. 14866-14875, (DOI:
+          10.1109/TITS.2024.3411117) (Impact Factor: 7.9) (h5-index: 143)</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a
+            href="https://www.sciencedirect.com/science/article/pii/S0893608023006585" target="_blank"
+            rel="noopener noreferrer">Corruption Depth: Analysis of DNN depth for Misclassification</a>, In Neural
+          Networks, 2024, vol. 172, pp. 106013. (Impact Factor: 6.0) (h5-index: 95) (SSRN Link)</p>
         <p></p>
       </div>
       <!-- Conferences Section -->
       <h2>Conferences</h2>
       <div class="publication-list">
-        <p>P. Rai, P. Pal, A. Agarwal, <a href="https://openreview.net/pdf?id=VAJVN44B5b" target="_blank" rel="noopener noreferrer">A Generalized Semiconductor Wafer Defect Classifier</a>, ICLR TinyPapers, 2024. (h5-index: 304) (Invite to Present)</p>
-        <p>K. Bhesra, S. Shukla, A. Agarwal, <a href="https://openreview.net/pdf?id=dD2e3aCEcO" target="_blank" rel="noopener noreferrer">Audio vs. Text: Identify a Powerful Modality for Effective Hate Speech Detection</a>, ICLR TinyPapers, 2024. (h5-index: 304) (Invite to Present)</p>
-        <p>A. Likhit, D. Tripathi, A. Agarwal, <a href="https://openreview.net/pdf?id=HzEefCle2c" target="_blank" rel="noopener noreferrer">A Novel Sector-Based Algorithm for an Optimized Star-Galaxy Classification</a>, ICLR TinyPapers, 2024. (h5-index: 304)</p>
-        <p>H. Dhake, A. Agarwal, <a href="https://openreview.net/pdf?id=Jdk8o63wyP" target="_blank" rel="noopener noreferrer">On the Robustness of Drug Abuse Face Classification</a>, ICLR TinyPapers, 2024. (h5-index: 304)</p>
-        <p>SaiAsrith BEVNM, A. Agarwal, On the Effectiveness of a Hybrid Model for Volatility Prediction, IEEE International Conference on Machine Learning and Applications, 2024</p>
-        <p>K. Bhesra, A. Agarwal, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78119-3_14" target="_blank" rel="noopener noreferrer">A Multi-Modal Framework to Counter Hate Speeches</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 197-207</p>
-        <p>A. Yadav, V. Pareek, A. Agarwal, S. Chaudhury, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78183-4_18" target="_blank" rel="noopener noreferrer">Neural Encoding of Odors: Translating Odors into Unique Digital Representation with EEG Signals</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 280-295</p>
-        <p>U. Rathore, A. Agarwal, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78341-8_9" target="_blank" rel="noopener noreferrer">An Unconstrained Dataset for Face Recognition Across Distance, Pose, and Resolution</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 127-144</p>
-        <p>A. Agarwal, M. Uzair, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78498-9_5" target="_blank" rel="noopener noreferrer">Robustness of Classifiers for AI-Generated Text Detectors For Copyright and Privacy Protected Society</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 55-71</p>
-        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78169-8_3" target="_blank" rel="noopener noreferrer">Supervised Mixup: Protecting the Likely Classes for Adversarial Robustness</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 30-45</p>
-        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78107-0_21" target="_blank" rel="noopener noreferrer">Restoring Noisy Images using Dual-tail Encoder-Decoder Signal Separation Network</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 329-345</p>
-        <p>H. Dhake, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744470" target="_blank" rel="noopener noreferrer">Enhancing Drug Abuse Face Recognition: A Study on Image Corruption and Restoration</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-8</p>
-        <p>V. Kumar, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744463" target="_blank" rel="noopener noreferrer">Are Object Recognition Models Effective and Unbiased for Biometric Recognition?</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-10</p>
-        <p>M. RA, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744471" target="_blank" rel="noopener noreferrer">Benchmarking In-the-wild Soft Biometric Attribute Identification</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-8</p>
-        <p>M. Dosi, U. Rathore, C. Chiranjeev, A. Agarwal, R. Singh, M Vatsa, <a href="https://ieeexplore.ieee.org/document/10744440" target="_blank" rel="noopener noreferrer">Is Face Super Resolution Truly Pushing the Boundaries of Face Recognition?</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-9</p>
-        <p>A. Agarwal, N. Ratha, <a href="https://ieeexplore.ieee.org/document/10648209" target="_blank" rel="noopener noreferrer">Face Morphing Detection in Social Media Content</a>, IEEE International Conference on Image Processing (ICIP), pp. 801-806, 2024 (h5-index: 66)</p>
-        <p>A. Agarwal, N. Ratha, <a href="https://openaccess.thecvf.com/content/CVPR2024W/DFAD/papers/Agarwal_Deepfake_Catcher_Can_a_Simple_Fusion_be_Effective_and_Outperform_CVPRW_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Deepfake Catcher: Can a Simple Fusion be Effective and Outperform Complex DNNs?</a>, CVPR Workshop and Challenge on DeepFake Analysis and Detection (CVPRW), 2024, pp. 3791-3801 (h5-index: 115) </p>
-        <p>H. Dhake, A. Agarwal, <a href="https://openaccess.thecvf.com/content/CVPR2024W/ABAW/papers/Dhake_Unravelling_Robustness_of_Deep_Face_Recognition_Networks_Against_Illicit_Drug_CVPRW_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Unravelling Robustness of Deep Face Recognition Networks Against Illicit Drug Abuse Images</a>, CVPR Workshop and Competition on Affective Behavior Analysis in-the-wild (CVPRW), 2024, pp. 4842-4848 (h5-index: 115)</p>
-        <p>A. Agarwal, N. Ratha, <a href="https://brosdocs.net/fg2024/061.pdf" target="_blank" rel="noopener noreferrer">Deepfake: Classifiers, Fairness, and Demographically Robust Algorithm, IEEE International</a>, Conference on Automatic Face and Gesture Recognition, 2024, pp. 1-9 (h5-index: 43)</p>
-        <p>S. Kundu, S. Swarnkar, and A. Agarwal, <a href="https://meetingorganizer.copernicus.org/EGU24/EGU24-1117.html" target="_blank" rel="noopener noreferrer">Application of Machine-Learning Based Models for Prediction of Suspended Sediment Load in the Indian Peninsular River Basin</a>, EGU General Assembly, Vienna, Austria, EGU24-1117, https://doi.org/10.5194/egusphere-egu24-1117, 2024</p>
+        <p>P. Rai, P. Pal, A. Agarwal, <a href="https://openreview.net/pdf?id=VAJVN44B5b" target="_blank"
+            rel="noopener noreferrer">A Generalized Semiconductor Wafer Defect Classifier</a>, ICLR TinyPapers, 2024.
+          (h5-index: 304) (Invite to Present)</p>
+        <p>K. Bhesra, S. Shukla, A. Agarwal, <a href="https://openreview.net/pdf?id=dD2e3aCEcO" target="_blank"
+            rel="noopener noreferrer">Audio vs. Text: Identify a Powerful Modality for Effective Hate Speech
+            Detection</a>, ICLR TinyPapers, 2024. (h5-index: 304) (Invite to Present)</p>
+        <p>A. Likhit, D. Tripathi, A. Agarwal, <a href="https://openreview.net/pdf?id=HzEefCle2c" target="_blank"
+            rel="noopener noreferrer">A Novel Sector-Based Algorithm for an Optimized Star-Galaxy Classification</a>,
+          ICLR TinyPapers, 2024. (h5-index: 304)</p>
+        <p>H. Dhake, A. Agarwal, <a href="https://openreview.net/pdf?id=Jdk8o63wyP" target="_blank"
+            rel="noopener noreferrer">On the Robustness of Drug Abuse Face Classification</a>, ICLR TinyPapers, 2024.
+          (h5-index: 304)</p>
+        <p>SaiAsrith BEVNM, A. Agarwal, On the Effectiveness of a Hybrid Model for Volatility Prediction, IEEE
+          International Conference on Machine Learning and Applications, 2024</p>
+        <p>K. Bhesra, A. Agarwal, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78119-3_14"
+            target="_blank" rel="noopener noreferrer">A Multi-Modal Framework to Counter Hate Speeches</a>, IEEE/IAPR
+          International Conference on Pattern Recognition (ICPR), 2024, pp. 197-207</p>
+        <p>A. Yadav, V. Pareek, A. Agarwal, S. Chaudhury, <a
+            href="https://link.springer.com/chapter/10.1007/978-3-031-78183-4_18" target="_blank"
+            rel="noopener noreferrer">Neural Encoding of Odors: Translating Odors into Unique Digital Representation
+            with EEG Signals</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 280-295
+        </p>
+        <p>U. Rathore, A. Agarwal, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78341-8_9"
+            target="_blank" rel="noopener noreferrer">An Unconstrained Dataset for Face Recognition Across Distance,
+            Pose, and Resolution</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp.
+          127-144</p>
+        <p>A. Agarwal, M. Uzair, <a href="https://link.springer.com/chapter/10.1007/978-3-031-78498-9_5" target="_blank"
+            rel="noopener noreferrer">Robustness of Classifiers for AI-Generated Text Detectors For Copyright and
+            Privacy Protected Society</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp.
+          55-71</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a
+            href="https://link.springer.com/chapter/10.1007/978-3-031-78169-8_3" target="_blank"
+            rel="noopener noreferrer">Supervised Mixup: Protecting the Likely Classes for Adversarial Robustness</a>,
+          IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 30-45</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a
+            href="https://link.springer.com/chapter/10.1007/978-3-031-78107-0_21" target="_blank"
+            rel="noopener noreferrer">Restoring Noisy Images using Dual-tail Encoder-Decoder Signal Separation
+            Network</a>, IEEE/IAPR International Conference on Pattern Recognition (ICPR), 2024, pp. 329-345</p>
+        <p>H. Dhake, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744470" target="_blank"
+            rel="noopener noreferrer">Enhancing Drug Abuse Face Recognition: A Study on Image Corruption and
+            Restoration</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-8</p>
+        <p>V. Kumar, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744463" target="_blank"
+            rel="noopener noreferrer">Are Object Recognition Models Effective and Unbiased for Biometric
+            Recognition?</a>, IEEE International Joint Conference on Biometrics (IJCB), 2024, pp. 1-10</p>
+        <p>M. RA, A. Agarwal, <a href="https://ieeexplore.ieee.org/document/10744471" target="_blank"
+            rel="noopener noreferrer">Benchmarking In-the-wild Soft Biometric Attribute Identification</a>, IEEE
+          International Joint Conference on Biometrics (IJCB), 2024, pp. 1-8</p>
+        <p>M. Dosi, U. Rathore, C. Chiranjeev, A. Agarwal, R. Singh, M Vatsa, <a
+            href="https://ieeexplore.ieee.org/document/10744440" target="_blank" rel="noopener noreferrer">Is Face Super
+            Resolution Truly Pushing the Boundaries of Face Recognition?</a>, IEEE International Joint Conference on
+          Biometrics (IJCB), 2024, pp. 1-9</p>
+        <p>A. Agarwal, N. Ratha, <a href="https://ieeexplore.ieee.org/document/10648209" target="_blank"
+            rel="noopener noreferrer">Face Morphing Detection in Social Media Content</a>, IEEE International Conference
+          on Image Processing (ICIP), pp. 801-806, 2024 (h5-index: 66)</p>
+        <p>A. Agarwal, N. Ratha, <a
+            href="https://openaccess.thecvf.com/content/CVPR2024W/DFAD/papers/Agarwal_Deepfake_Catcher_Can_a_Simple_Fusion_be_Effective_and_Outperform_CVPRW_2024_paper.pdf"
+            target="_blank" rel="noopener noreferrer">Deepfake Catcher: Can a Simple Fusion be Effective and Outperform
+            Complex DNNs?</a>, CVPR Workshop and Challenge on DeepFake Analysis and Detection (CVPRW), 2024, pp.
+          3791-3801 (h5-index: 115) </p>
+        <p>H. Dhake, A. Agarwal, <a
+            href="https://openaccess.thecvf.com/content/CVPR2024W/ABAW/papers/Dhake_Unravelling_Robustness_of_Deep_Face_Recognition_Networks_Against_Illicit_Drug_CVPRW_2024_paper.pdf"
+            target="_blank" rel="noopener noreferrer">Unravelling Robustness of Deep Face Recognition Networks Against
+            Illicit Drug Abuse Images</a>, CVPR Workshop and Competition on Affective Behavior Analysis in-the-wild
+          (CVPRW), 2024, pp. 4842-4848 (h5-index: 115)</p>
+        <p>A. Agarwal, N. Ratha, <a href="https://brosdocs.net/fg2024/061.pdf" target="_blank"
+            rel="noopener noreferrer">Deepfake: Classifiers, Fairness, and Demographically Robust Algorithm, IEEE
+            International</a>, Conference on Automatic Face and Gesture Recognition, 2024, pp. 1-9 (h5-index: 43)</p>
+        <p>S. Kundu, S. Swarnkar, and A. Agarwal, <a
+            href="https://meetingorganizer.copernicus.org/EGU24/EGU24-1117.html" target="_blank"
+            rel="noopener noreferrer">Application of Machine-Learning Based Models for Prediction of Suspended Sediment
+            Load in the Indian Peninsular River Basin</a>, EGU General Assembly, Vienna, Austria, EGU24-1117,
+          https://doi.org/10.5194/egusphere-egu24-1117, 2024</p>
       </div>
       <!-- Workshops Section -->
       <!-- <h2>Workshops</h2>
@@ -420,45 +940,81 @@
       <hr> -->
     </div>
 
-     <!-- Publications for 2023 (Divided into Sections) -->
-     <div id="2023" class="publication-year hidden">
+    <!-- Publications for 2023 (Divided into Sections) -->
+    <div id="2023" class="publication-year hidden">
       <!-- Journals Section -->
       <h2>Journals</h2>
       <div class="publication-list">
-        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a href="https://www.sciencedirect.com/science/article/pii/S1566253523000301" target="_blank" rel="noopener noreferrer">Parameter Agnostic Stacked Wavelet Transformer for Detecting Singularities</a>, In Information Fusion, 2023</p>
-        <p>A. Agarwal, R. Singh, M. Vatsa, N. Ratha, <a href="https://ieeexplore.ieee.org/abstract/document/9891832" target="_blank" rel="noopener noreferrer">IBAttack: Being Cautious about Data Labels</a>, In IEEE Transactions on Artificial Intelligence (IEEE T-AI), 2023 (DOI: 10.1109/TAI.2022.3206259)</p>
-        <p>A. Mehra, A. Agarwal, M. Vatsa, and R. Singh, <a href="https://ieeexplore.ieee.org/abstract/document/9872100" target="_blank" rel="noopener noreferrer">Motion Magnified 3-D Residual-in-Dense Network for DeepFake Detection</a>, In IEEE Transactions on Biometrics, Behavior, and Identity Science (IEEE T-BIOM), volume 5, pp 39-52, 2023</p>
+        <p>A. Agarwal, M. Vatsa, R. Singh, N. Ratha, <a
+            href="https://www.sciencedirect.com/science/article/pii/S1566253523000301" target="_blank"
+            rel="noopener noreferrer">Parameter Agnostic Stacked Wavelet Transformer for Detecting Singularities</a>, In
+          Information Fusion, 2023</p>
+        <p>A. Agarwal, R. Singh, M. Vatsa, N. Ratha, <a href="https://ieeexplore.ieee.org/abstract/document/9891832"
+            target="_blank" rel="noopener noreferrer">IBAttack: Being Cautious about Data Labels</a>, In IEEE
+          Transactions on Artificial Intelligence (IEEE T-AI), 2023 (DOI: 10.1109/TAI.2022.3206259)</p>
+        <p>A. Mehra, A. Agarwal, M. Vatsa, and R. Singh, <a href="https://ieeexplore.ieee.org/abstract/document/9872100"
+            target="_blank" rel="noopener noreferrer">Motion Magnified 3-D Residual-in-Dense Network for DeepFake
+            Detection</a>, In IEEE Transactions on Biometrics, Behavior, and Identity Science (IEEE T-BIOM), volume 5,
+          pp 39-52, 2023</p>
       </div>
       <!-- Conferences Section -->
       <h2>Conferences</h2>
       <div class="publication-list">
-        <p>V. Kumar and A. Agarwal, <a href="https://www.researchgate.net/profile/Vishesh-Rajput/publication/380324573_On_Unconstrained_Ear_Recognition_For_Privacy-Preserving_Authentication/links/6636059e06ea3d0b74258a80/On-Unconstrained-Ear-Recognition-For-Privacy-Preserving-Authentication.pdf" target="_blank" rel="noopener noreferrer">On Unconstrained Ear Recognition For Privacy-Preserving Authentication</a>, Workshop on Advances of Mobile and Wearable Biometrics (WAMWB), in conjunction with ACM International Conference on Mobile Human-Computer Interaction (MobileHCI), 2023.</p>
-        <p>Ojawasee, A. Agarwal, N. Ratha, <a href="https://openaccess.thecvf.com/content/ICCV2023W/OODCV/html/Ojaswee_Benchmarking_Image_Classifiers_for_Physical_Out-of-Distribution_Examples_Detection_ICCVW_2023_paper.html" target="_blank" rel="noopener noreferrer">Benchmarking Image Classifiers for Physical Out-of-Distribution Examples Detection</a>, ICCV Workshop and Challenges for Out-of-Distribution Generalization in Computer Vision, 2023.</p>
-        <p>R. Sharma, B. Jawade, A. Agarwal, S. Setlur, and N. Ratha, <a href="https://ieeexplore.ieee.org/abstract/document/10349650" target="_blank" rel="noopener noreferrer">Attention Guided Multi-attribute Architecture For Deepfake Detection</a>, IEEE Western New York Image and Signal Processing Workshop (WNYISPW), pp. 1-4, 2023</p>
-        <p>G. Goswami, A. Agarwal, N. K. Ratha, R. Singh, M. Vatsa, <a href="https://openreview.net/pdf?id=qX8cGLnfAd" target="_blank" rel="noopener noreferrer">Federated Learning for Local and Global Data Distribution</a>, ICLR TinyPapers, 2023</p>
-        <p>U. Rathore, A. Agarwal, <a href="https://openreview.net/pdf?id=rLqN6XLbON" target="_blank" rel="noopener noreferrer">Is DFR for Soft Biometrics Prediction in Unconstrained Images Fair and Effective?</a>,  ICLR TinyPapers, 2023</p>
-        <p>A. Agarwal and N. Ratha, <a href="http://" target="_blank" rel="noopener noreferrer">On the Robustness of Stock Market Regressors</a>, Workshop on Modelling Uncertainty in the Financial World (MUFin) In Conjunction with AAAI, 2023</p>
-        <p>A. Agarwal, N. Ratha, A. Noore, R. Singh, M. Vatsa, <a href="https://openaccess.thecvf.com/content/WACV2023/html/Agarwal_Misclassifications_of_Contact_Lens_Iris_PAD_Algorithms_Is_It_Gender_WACV_2023_paper.html" target="_blank" rel="noopener noreferrer">Misclassifications of Contact Lens Iris PAD Algorithms: Is it Gender Bias or Environmental Conditions?</a>, IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2023        </p>
+        <p>V. Kumar and A. Agarwal, <a
+            href="https://www.researchgate.net/profile/Vishesh-Rajput/publication/380324573_On_Unconstrained_Ear_Recognition_For_Privacy-Preserving_Authentication/links/6636059e06ea3d0b74258a80/On-Unconstrained-Ear-Recognition-For-Privacy-Preserving-Authentication.pdf"
+            target="_blank" rel="noopener noreferrer">On Unconstrained Ear Recognition For Privacy-Preserving
+            Authentication</a>, Workshop on Advances of Mobile and Wearable Biometrics (WAMWB), in conjunction with ACM
+          International Conference on Mobile Human-Computer Interaction (MobileHCI), 2023.</p>
+        <p>Ojawasee, A. Agarwal, N. Ratha, <a
+            href="https://openaccess.thecvf.com/content/ICCV2023W/OODCV/html/Ojaswee_Benchmarking_Image_Classifiers_for_Physical_Out-of-Distribution_Examples_Detection_ICCVW_2023_paper.html"
+            target="_blank" rel="noopener noreferrer">Benchmarking Image Classifiers for Physical Out-of-Distribution
+            Examples Detection</a>, ICCV Workshop and Challenges for Out-of-Distribution Generalization in Computer
+          Vision, 2023.</p>
+        <p>R. Sharma, B. Jawade, A. Agarwal, S. Setlur, and N. Ratha, <a
+            href="https://ieeexplore.ieee.org/abstract/document/10349650" target="_blank"
+            rel="noopener noreferrer">Attention Guided Multi-attribute Architecture For Deepfake Detection</a>, IEEE
+          Western New York Image and Signal Processing Workshop (WNYISPW), pp. 1-4, 2023</p>
+        <p>G. Goswami, A. Agarwal, N. K. Ratha, R. Singh, M. Vatsa, <a href="https://openreview.net/pdf?id=qX8cGLnfAd"
+            target="_blank" rel="noopener noreferrer">Federated Learning for Local and Global Data Distribution</a>,
+          ICLR TinyPapers, 2023</p>
+        <p>U. Rathore, A. Agarwal, <a href="https://openreview.net/pdf?id=rLqN6XLbON" target="_blank"
+            rel="noopener noreferrer">Is DFR for Soft Biometrics Prediction in Unconstrained Images Fair and
+            Effective?</a>, ICLR TinyPapers, 2023</p>
+        <p>A. Agarwal and N. Ratha, <a href="http://" target="_blank" rel="noopener noreferrer">On the Robustness of
+            Stock Market Regressors</a>, Workshop on Modelling Uncertainty in the Financial World (MUFin) In Conjunction
+          with AAAI, 2023</p>
+        <p>A. Agarwal, N. Ratha, A. Noore, R. Singh, M. Vatsa, <a
+            href="https://openaccess.thecvf.com/content/WACV2023/html/Agarwal_Misclassifications_of_Contact_Lens_Iris_PAD_Algorithms_Is_It_Gender_WACV_2023_paper.html"
+            target="_blank" rel="noopener noreferrer">Misclassifications of Contact Lens Iris PAD Algorithms: Is it
+            Gender Bias or Environmental Conditions?</a>, IEEE/CVF Winter Conference on Applications of Computer Vision
+          (WACV), 2023 </p>
       </div>
     </div>
 
-         <!-- Publications for 2022 (Divided into Sections) -->
-         <div id="2022" class="publication-year hidden">
-          <!-- Journals Section -->
-          <h2>Journals</h2>
-          <div class="publication-list">
-            <p>A. Agarwal, N. Ratha, M. Vatsa, R. Singh, <a href="https://ieeexplore.ieee.org/abstract/document/9887823" target="_blank" rel="noopener noreferrer">Crafting Adversarial Perturbations via Transformed Image Component Swapping</a>IEEE Transactions on Image Processing (IEEE T-IP), vol. 31, pp. 7338-7349, 2022.</p>
-          </div>
-          <!-- Conferences Section -->
-          <h2>Conferences</h2>
-          <div class="publication-list">
-            <p>S. Bagchi, G. Chanda, A. Agarwal, and N. Ratha, <a href="https://ieeexplore.ieee.org/abstract/document/9982726" target="_blank" rel="noopener noreferrer">On Deep Learning for Dorsal Hand Vein Recognition</a>, IEEE Western New York Image and Signal Processing Workshop (WNYISPW), pp. 1-4, 2022</p>
-          </div>
-          <h2>Book Chapters</h2>
-          <div class="publication-list">
-            <p>A. Agarwal and N. Ratha, <a href="https://www.sciencedirect.com/science/article/abs/pii/S016971612200058X" target="_blank" rel="noopener noreferrer">Manipulating Faces for Identity Theft via Morphing and Deepfake</a>, Handbook of Statistics: Deep Learning, Elsevier, 2022</p>
-          </div>
-        </div>
+    <!-- Publications for 2022 (Divided into Sections) -->
+    <div id="2022" class="publication-year hidden">
+      <!-- Journals Section -->
+      <h2>Journals</h2>
+      <div class="publication-list">
+        <p>A. Agarwal, N. Ratha, M. Vatsa, R. Singh, <a href="https://ieeexplore.ieee.org/abstract/document/9887823"
+            target="_blank" rel="noopener noreferrer">Crafting Adversarial Perturbations via Transformed Image Component
+            Swapping</a>IEEE Transactions on Image Processing (IEEE T-IP), vol. 31, pp. 7338-7349, 2022.</p>
+      </div>
+      <!-- Conferences Section -->
+      <h2>Conferences</h2>
+      <div class="publication-list">
+        <p>S. Bagchi, G. Chanda, A. Agarwal, and N. Ratha, <a
+            href="https://ieeexplore.ieee.org/abstract/document/9982726" target="_blank" rel="noopener noreferrer">On
+            Deep Learning for Dorsal Hand Vein Recognition</a>, IEEE Western New York Image and Signal Processing
+          Workshop (WNYISPW), pp. 1-4, 2022</p>
+      </div>
+      <h2>Book Chapters</h2>
+      <div class="publication-list">
+        <p>A. Agarwal and N. Ratha, <a href="https://www.sciencedirect.com/science/article/abs/pii/S016971612200058X"
+            target="_blank" rel="noopener noreferrer">Manipulating Faces for Identity Theft via Morphing and
+            Deepfake</a>, Handbook of Statistics: Deep Learning, Elsevier, 2022</p>
+      </div>
+    </div>
   </main>
 
   <!-- Include Footer -->
@@ -484,8 +1040,9 @@
       }
     }
 
-    // Show default year (2024) on page load
-    showYear('2025');
+    // Show default year (2026) on page load
+    showYear('2026');
   </script>
 </body>
+
 </html>
