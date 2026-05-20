@@ -72,7 +72,8 @@
 
     /* Stepped News Ticker & Highlight Styles */
     .news-scroll {
-      animation: none !important; /* Disable default continuous scroll */
+      animation: none !important;
+      /* Disable default continuous scroll */
       position: relative !important;
       bottom: auto !important;
       top: 0 !important;
@@ -94,14 +95,17 @@
 
     /* Highlight first news item (ICML) */
     .news-scroll li:first-child {
-      background-color: #e3f2fd !important; /* Light blue background */
-      border-left: 4px solid #2196f3 !important; /* Blue accent border */
+      background-color: #e3f2fd !important;
+      /* Light blue background */
+      border-left: 4px solid #2196f3 !important;
+      /* Blue accent border */
       border-radius: 4px;
       margin-bottom: 5px;
     }
 
     .news-scroll li:first-child a {
-      color: #0d47a1 !important; /* Deep blue text */
+      color: #0d47a1 !important;
+      /* Deep blue text */
       font-weight: bold;
     }
 
@@ -244,8 +248,8 @@
           <div class="news-scroll-container">
             <div class="news-scroll">
               <ul>
-                <li><a href="publications.html#icml-2026" target="_blank" rel="noopener noreferrer">Research work from TBVL lab got accepted
-                    in ICML 2026 (Authors: Vishesh Rajput, and Akshay Agarwal)</a></li>
+                <!-- <li><a href="publications.html#icml-2026" target="_blank" rel="noopener noreferrer">Research work from TBVL lab got accepted
+                    in ICML 2026 (Authors: Vishesh Rajput, and Akshay Agarwal)</a></li> -->
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">Ritika Jain &amp; Atul Kumar: paper
                     accepted to WiML 2025 - <em>Deep Models Under Domain Shift: A Sketch-Based Study</em></a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">Atul Kumar wins Best Poster Award—
@@ -298,18 +302,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/counter.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const newsScroll = document.querySelector('.news-scroll');
       const newsList = newsScroll.querySelector('ul');
       const items = newsList.querySelectorAll('li');
-      
+
       if (items.length > 1) {
         let currentIndex = 0;
         const totalItems = items.length;
-        
+
         function moveNews() {
           currentIndex++;
-          
+
           if (currentIndex >= totalItems) {
             // Smoothly jump back to start
             newsScroll.style.transition = 'none';
@@ -322,19 +326,19 @@
             // Calculate the exact offset. 
             // We scroll by the cumulative height of previous items.
             let offset = 0;
-            for(let i = 0; i < currentIndex; i++) {
+            for (let i = 0; i < currentIndex; i++) {
               offset += items[i].offsetHeight;
             }
             newsScroll.style.transform = `translateY(-${offset}px)`;
           }
         }
-        
+
         // Initial setup for smooth transition
         newsScroll.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        
+
         // Change news every 5 seconds
         let tickerInterval = setInterval(moveNews, 5000);
-        
+
         // Pause on hover
         newsScroll.addEventListener('mouseenter', () => clearInterval(tickerInterval));
         newsScroll.addEventListener('mouseleave', () => tickerInterval = setInterval(moveNews, 5000));
