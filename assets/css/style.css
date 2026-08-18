@@ -521,6 +521,20 @@ main {
     color: #e0f7fa; /* Light cyan text matching the logo */
 }
 
+.overlay-fellowship {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: rgba(76, 161, 175, 0.2); /* Semi-transparent brand teal background */
+    border: 1px solid rgba(76, 161, 175, 0.6); /* Teal border matching card theme */
+    padding: 4px 12px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    color: #e0f7fa; /* Light cyan text matching logo */
+    display: inline-block;
+}
+
 .overlay-research {
     font-size: 0.85rem;
     line-height: 1.4;
